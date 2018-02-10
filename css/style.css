@@ -13,7 +13,26 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+.xbeat-logo-wrapper{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    width: 160px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    opacity: .9;
+    border-radius: 44px;
+}
  
+.xbeat-logo-up {
+    position: relative;
+    width: 120px;
+    margin: auto;
+}
+
 .mainContainer {
 	position: absolute;
 	top: 20px;
