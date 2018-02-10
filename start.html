@@ -7,22 +7,103 @@
 </head>
 
 <body>
-	<div class="container">
-	  <ul class="menu">
-	    <li><a href="#" data-id="bio" data-color="#ce4b99" class="active tab">PLAYER BIO</a></li>
-	    <li><a href="#" data-id="details" data-color="#b1c94e" class="menu_item tab">PLAYER DETAILS</a></li>
-	    <li><a href="#" data-id="attribute" data-color="#377bbc" class="menu_item tab">ATTRIBUTE DETAILS</a></li>
-	  </ul>
-	  <div class="content active" id="bio">
-	    bio about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about 
-	  </div>
-	  <div class="content" id="details">
-	    details service service service service service service service service service service service service service service service service service service service service service service service service service
-	  </div>
-	  <div class="content" id="attribute">
-	    attribute contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
-	  </div>
+	<!-- Main Menu -->
+	<div class = "mainContainer">
+		<ul class="menu">
+			<li><a href="#" data-id="playerStatsContainer" data-color="#ce4b99" class="active tab">PLAYER STATISTICS</a></li>
+			<li><a href="#" data-id="teamStatsContainer" data-color="#b1c94e" class="menu_item tab">TEAMS STATISTICS</a></li>
+			<li><a href="#" data-id="playerComparisonContainer" data-color="#377bbc" class="menu_item tab">PLAYER COMPARISON</a></li>
+			<li><a href="#" data-id="gameStatsContainer" data-color="#fa8f09" class="menu_item tab">GAME STATISTICS</a></li>
+			<li><a href="#" data-id="gameTacticsContainer" data-color="#e5be03" class="menu_item tab">GAME TACTICS</a></li>
+		</ul>
+	</div>
+
+	<!-- Player Stat -->
+	<div id = "playerStatsContainer" class = "playerStatsContainer tab_content">
+		<ul class="menu">
+			<li><a href="#" data-id="bio" data-color="#ce4b99" class="active tab">PLAYER BIO</a></li>
+			<li><a href="#" data-id="details" data-color="#ce4b99" class="menu_item tab">PLAYER DETAILS</a></li>
+			<li><a href="#" data-id="attribute" data-color="#ce4b99" class="menu_item tab">ATTRIBUTE DETAILS</a></li>
+		</ul>
+		<div class="content active" id="bio">
+			BIO about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about 
+		</div>
+		<div class="content" id="details">
+			DETAILS service service service service service service service service service service service service service service service service service service service service service service service service service
+		</div>
+		<div class="content" id="attribute">
+			ATTRIBUTE contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
+		</div>
+	</div>
+
+	<!-- Team Stat -->
+	<div id="teamStatsContainer" class="teamStatsContainer tab_content">
+		<ul class="menu">
+			<li><a href="#" data-id="teamStat1" data-color="#b1c94e" class="active tab">Team Stat 1</a></li>
+			<li><a href="#" data-id="teamStat2" data-color="#b1c94e" class="menu_item tab">Team Stat 2</a></li>
+			<li><a href="#" data-id="teamStat3" data-color="#b1c94e" class="menu_item tab">Team Stat 3</a></li>
+		</ul>
+		<div class="content active" id="teamStat1">
+			Team Stat 1 about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about 
+		</div>
+		<div class="content" id="teamStat2">
+			Team Stat 2details service service service service service service service service service service service service service service service service service service service service service service service service service
+		</div>
+		<div class="content" id="teamStat3">
+			Team Stat 3attribute contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
+		</div>
+	</div>
+	
+	<!-- Player Comparison -->
+	<div id="playerComparisonContainer" class="playerComparisonContainer tab_content">
+		<ul class="menu">
+			<li><a href="#" data-id="comp1" data-color="#377bbc" class="active tab">Player 1</a></li>
+			<li><a href="#" data-id="comp2" data-color="#377bbc" class="menu_item tab">Player 2</a></li>
+		</ul>
+		<div class="content active" id="comp1">
+			Player 1 about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about 
+		</div>
+		<div class="content" id="comp2">
+			Player 2 service service service service service service service service service service service service service service service service service service service service service service service service service
+		</div>
+	</div>
+
+	<!-- Game Stat -->
+	<div id="gameStatsContainer" class="gameStatsContainer tab_content">
+		<ul class="menu">
+			<li><a href="#" data-id="gameStat1" data-color="#fa8f09" class="active tab">Game Stat 1</a></li>
+			<li><a href="#" data-id="gameStat2" data-color="#fa8f09" class="menu_item tab">Game Stat 2</a></li>
+			<li><a href="#" data-id="gameStat3" data-color="#fa8f09" class="menu_item tab">Game Stat 3</a></li>
+		</ul>
+		<div class="content active" id="gameStat1">
+			Game Stat1 about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about 
+		</div>
+		<div class="content" id="gameStat2">
+			Game Stat2 service service service service service service service service service service service service service service service service service service service service service service service service service
+		</div>
+		<div class="content" id="gameStat3">
+			Game Stat3 contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
+		</div>
+	</div>
+
+	<!-- Game Tactics -->
+	<div id="gameTacticsContainer" class="gameTacticsContainer tab_content">
+		<ul class="menu">
+			<li><a href="#" data-id="gameTact1" data-color="#e5be03" class="active tab">Game Tactics 1</a></li>
+			<li><a href="#" data-id="gameTact2" data-color="#e5be03" class="menu_item tab">Game Tactics 2</a></li>
+			<li><a href="#" data-id="gameTact3" data-color="#e5be03" class="menu_item tab">Game Tactics 3</a></li>
+		</ul>
+		<div class="content active" id="gameTact1">
+			Tacts1 about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about 
+		</div>
+		<div class="content" id="gameTact2">
+			Tacts2 service service service service service service service service service service service service service service service service service service service service service service service service service
+		</div>
+		<div class="content" id="gameTact3">
+			Tacts3 contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
+		</div>
 	</div>
 	<script src="js/index.js"></script>
+
 </body>
 </html>
