@@ -1,0 +1,88 @@
+ 
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700');
+
+html {
+    height: 100%
+}
+
+body {
+    padding: 0;
+    margin: 0;
+	font-family: 'Barlow Condensed', sans-serif;
+	background: url(../img/stadiums-33.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+ 
+.container {
+    padding: 0;
+    margin: 100px auto;
+    width: 1200px;
+    height: 800px;
+}
+ 
+ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    background: #fff;
+}
+ 
+ul.menu li {
+    display: inline-block;
+}
+ 
+ul.menu li a {
+    display: inline-block;
+    font-size: 22px;
+    width: 220px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px;
+    color: #333;
+}
+ 
+ul.menu li a.active {
+    display: inline-block;
+    font-size: 22px;
+    width: 220px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px;
+    background: #ce4b99;
+    color: #fff;
+}
+
+ul.menu li a.menu_item {
+    display: inline-block;
+    font-size: 22px;
+    width: 220px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px;
+    background: #fff;
+    color: #333;
+}
+
+
+.content {
+    font-size: 14px;
+    padding: 7px 10px;
+    line-height: 1.4;
+    background-color: rgba( 53, 61, 62, .7);
+    color: #fff;
+    height: 800px;
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
