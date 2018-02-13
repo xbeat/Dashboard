@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Dashboard xbe.at 1.0.1</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/gauge.css" />
+	<script type="text/javascript" src="js/gauge.js"></script>
 </head>
 
 <body>
@@ -29,7 +31,25 @@
 			<li><a href="#" data-id="attribute" data-color="#ce4b99" class="menu_item tab">ATTRIBUTE DETAILS</a></li>
 		</ul>
 		<div class="content active" id="bio">
-			BIO about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about 
+			<!-- multiple segment -->
+			<svg width="100px" height="100px" viewBox="0 0 42 42" class="gauge">
+			  <circle class="gauge-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+			  <circle class="gauge-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
+
+			  <circle class="gauge-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="40 60" stroke-dashoffset="25"></circle>
+			  <circle class="gauge-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#b1c94e" stroke-width="3" stroke-dasharray="20 80" stroke-dashoffset="85"></circle>
+			  <circle class="gauge-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#377bbc" stroke-width="3" stroke-dasharray="30 70" stroke-dashoffset="65"></circle>
+			  <!-- unused 10% -->
+			</svg>
+
+			<script> let gaugeHalf = new Gauge( 20, 35, 1500, "half", "-Half", "Beers", "#ce4b99", document.getElementById("bio") ); </script>
+			<button onclick = "gaugeHalf.animate();">GO Half</button>
+
+			<script> let gaugeFull = new Gauge( 20, 65, 1500, "full", "-Full", "Coke", "#b1c94e", document.getElementById("bio") ); </script>
+			<button onclick = "gaugeFull.animate();">GO Full</button>
+
+			<script> let gaugeFull2 = new Gauge( 20, 65, 1500, "full", "-Full2", "Wine", "#377bbc", document.getElementById("bio") ); </script>
+			<button onclick = "gaugeFull2.animate();">GO Full</button>
 		</div>
 		<div class="content" id="details">
 			DETAILS service service service service service service service service service service service service service service service service service service service service service service service service service
