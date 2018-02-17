@@ -120,9 +120,53 @@ ul.menu li a.menu_item {
     color: #fff;
     height: 800px;
     display: none;
+    align-items: center;
+    align-content: space-around;
 }
 
 .content.active {
     display: flex;
 }
+
+.bar-grey{
+    fill: #B8B8B8;
+    opacity: 0.9;
+    width: 140px;
+    height: 8px;
+}
+.the-line{
+    height: 8px;
+    fill: #FFD819;
+    opacity: 0.9;
+}
+@keyframes bar-running {
+    0%   { x: 0px;  }
+    20% { x: 200px; }
+    100% { x: 200px; }
+}
+.bar-lines .the-line{
+    animation: 5s linear bar-running infinite;
+}
+
+@keyframes bar-fadding {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.bar-wrapper{ 
+    animation: 5s linear bar-fadding infinite; 
+}
+
+.attribute-column{
+    display: flex;
+    flex-direction: column;
+    padding: 7px 10px;
+}
+
+.svg-bar{
+    width: "700px";
+    height: "230px";
+}
+
 

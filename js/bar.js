@@ -1,109 +1,84 @@
-class Gauge{
-	constructor( start = 30, stop = 100, duration = 1500, type = "full", element, label = "", fill, container = document.body ) {
+class Bar{
+	constructor( start = 10, stop = 100, duration = 1500, element, label = "", fill, container = document.body ) {
 
 		this.SVG_NS = "http://www.w3.org/2000/svg";
 		this.ease = Easing.easeOutQuint;
 		this.start = start;
-		this.stop = type == "full" ? stop > 100 ? 100 : stop : stop > 50 ? 50 : stop;  
+		this.stop = stop > 100 ? 100 : stop;  
 		this.max = 100;
 		this.fill = fill;
 		this.duration = duration;
 		this.container = container;
 		this.element = element;
-		this.ringDashOffset = type == "full" ? "" : "50";
-		this.ringDashArray = type == "full" ? "" : "50 50";
-		this.initializeGauge();	
+		this.initializeBar();	
 
-		document.getElementById( "gauge-number-" + this.element ).textContent = this.start;
-		document.getElementById( "gauge-label-" + this.element ).textContent = label;
-
-		switch ( type ){
-			case "half":
-				document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dasharray", this.start + " " +  ( this.max - this.start ) );
-				document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dashoffset", "50" );
-				break;
-
-			case "full":
-				document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dasharray", this.start + " " +  ( this.max - this.start ) );
-				document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dashoffset", "50" );
-				break;				
-		};
+		document.getElementById( "bar-number-" + this.element ).textContent = this.start;
+		document.getElementById( "bar-label-" + this.element ).textContent = label;
 
 		//this.animate();
 
 	};
 
-	initializeGauge() {
+	initializeBar() {
 
 		let SVGInner = new Array;
 		
-		SVGInner.push( this.svg( "circle", {
-				class: "gauge-hole",
-				cx: 21,
-				cy: 21,
-				r: 15.91549430918954,
-				fill: "#fff"
-			} )
-		);
-
-		SVGInner.push( this.svg( "circle", {
-				class: "gauge-ring",
-				cx: 21,
-				cy: 21,
-				r: 15.91549430918954,
+		SVGInner.push( this.svg( "line", {
+				class: "bar-background",
+				x1: 0,
+				y1: 21,
+				x2: 100,
+				y2: 21,
 				fill: "transparent",
-				"stroke-dasharray": this.ringDashArray, 
-				"stroke-dashoffset": this.ringDashOffset,
 				stroke: "#d2d3d4",
-				"stroke-width": "3"
+				"stroke-width": "6"
 			} )
 		);
 
-		SVGInner.push( this.svg( "circle", {
-				id: "gauge-segment-" + this.element,
-				class: "gauge-segment",
-				cx: 21,
-				cy: 21,
-				r: 15.91549430918954,
+		SVGInner.push( this.svg( "line", {
+				id: "bar-segment-" + this.element,
+				class: "bar-segment",
+				x1: 0,
+				y1: 21,
+				x2: this.start,
+				y2: 21,
 				fill: "transparent",
-				"stroke-dasharray": "30 70",
-				"stroke-dashoffset": "50",
 				stroke: this.fill,
-				"stroke-width": 3
+				"stroke-width": 6
 			} )
 		);
 
 		let SVGInnerText = new Array;
 		SVGInnerText.push( this.svg( "text", {
-				id: "gauge-number-" + this.element,
-				x: "50%",
-				y: "50%",
-				class: "gauge-number"
+				id: "bar-number-" + this.element,
+				x: "90px",
+				y: "15px",
+				fill: "#fff",
+				class: "bar-number"
 			} )
 		);
 
 		SVGInnerText.push( this.svg( "text", {
-				id: "gauge-label-" + this.element,
-				x: "50%",
-				y: "50%",
-				fill: "#999",
-				class: "gauge-label"
+				id: "bar-label-" + this.element,
+				x: "15px",
+				y: "15px",
+				fill: "#fff",
+				class: "bar-label"
 			} )
 		);
 		
 		SVGInner.push( this.svg( "g", {
-				class: "gauge-text"
+				class: "bar-text",
 			}, SVGInnerText )
 		);
 
-		let gaugeElement = this.svg( "svg", { 
-				viewBox: "0 0 42 42",
+		let barElement = this.svg( "svg", { 
+				viewBox: "0 0 100 30",
 				width: "100px",
-				height: "100px",
-				class: "gauge" 
+				height: "30px"
 		}, SVGInner );
 		
-		this.container.appendChild( gaugeElement );
+		this.container.appendChild( barElement );
 	};
 
 	/**
@@ -137,8 +112,8 @@ class Gauge{
 	};
 
 	onUpdate( position ){
-		document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dasharray", position + " " + ( this.max - position ) );
-		document.getElementById( "gauge-number-" + this.element ).textContent = parseInt( position * 2 );
+		document.getElementById( "bar-segment-" + this.element ).setAttribute( "x2", position );
+		document.getElementById( "bar-number-" + this.element ).textContent = parseInt( position );
 	};
 
 	onComplete(){
