@@ -1,34 +1,44 @@
 class Gauge{
-	constructor( start = 30, stop = 100, duration = 1500, type = "full", element, label = "", fill, container = document.body ) {
+	constructor( size = 100, strokeWidth = 3, start = 30, stop = 100, duration = 1500, type = "full", element, label = "", fill, container = document.body ) {
 
 		this.SVG_NS = "http://www.w3.org/2000/svg";
 		this.ease = Easing.easeOutQuint;
 		this.start = start;
-		this.stop = type == "full" ? stop > 100 ? 100 : stop : stop > 50 ? 50 : stop;  
+		this.stop = stop > 100 ? 100 : stop;  
 		this.max = 100;
+		this.size = size;
 		this.fill = fill;
+		this.label = label;
+		this.strokeWidth = strokeWidth;
 		this.duration = duration;
 		this.container = container;
 		this.element = element;
-		this.ringDashOffset = type == "full" ? "" : "50";
-		this.ringDashArray = type == "full" ? "" : "50 50";
-		this.initializeGauge();	
-
-		document.getElementById( "gauge-number-" + this.element ).textContent = this.start;
-		document.getElementById( "gauge-label-" + this.element ).textContent = label;
+		
+		this.radius = ( this.size / 2 ) - this.strokeWidth;
+		this.pos = this.size / 2;
+	
+		// 2 * Math.PI * (r - stroke-width)
+		this.circleLength = 2 * Math.PI * this.radius;		
 
 		switch ( type ){
 			case "half":
-				document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dasharray", this.start + " " +  ( this.max - this.start ) );
-				document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dashoffset", "50" );
+				this.step = ( this.circleLength / this.max ) / 2;
+				this.ringDashArray = this.circleLength / 2;
+				this.ringDashOffset = this.circleLength / 2;
+				this.segmentDashArray = this.start * this.step  + " " + ( this.circleLength - ( this.start * this.step ) );
+				this.segmentDashOffset = this.circleLength / 2;				
 				break;
 
 			case "full":
-				document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dasharray", this.start + " " +  ( this.max - this.start ) );
-				document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dashoffset", "50" );
+				this.step = this.circleLength / this.max;
+				this.ringDashArray = this.circleLength;
+				this.ringDashOffset = 0;
+				this.segmentDashArray = this.start * this.step  + " " + ( this.circleLength - ( this.start * this.step ) );
+				this.segmentDashOffset = this.circleLength / 2;				
 				break;				
 		};
 
+		this.initializeGauge();
 		//this.animate();
 
 	};
@@ -39,37 +49,37 @@ class Gauge{
 		
 		SVGInner.push( this.svg( "circle", {
 				class: "gauge-hole",
-				cx: 21,
-				cy: 21,
-				r: 15.91549430918954,
+				cx: this.pos,
+				cy: this.pos,
+				r: this.radius,
 				fill: "#fff"
 			} )
 		);
 
 		SVGInner.push( this.svg( "circle", {
 				class: "gauge-ring",
-				cx: 21,
-				cy: 21,
-				r: 15.91549430918954,
+				cx: this.pos,
+				cy: this.pos,
+				r: this.radius,
 				fill: "transparent",
-				"stroke-dasharray": this.ringDashArray, 
+				"stroke-dasharray": this.ringDashArray,
 				"stroke-dashoffset": this.ringDashOffset,
 				stroke: "#d2d3d4",
-				"stroke-width": "3"
+				"stroke-width": this.strokeWidth
 			} )
 		);
 
 		SVGInner.push( this.svg( "circle", {
 				id: "gauge-segment-" + this.element,
 				class: "gauge-segment",
-				cx: 21,
-				cy: 21,
-				r: 15.91549430918954,
+				cx: this.pos,
+				cy: this.pos,
+				r: this.radius,
 				fill: "transparent",
-				"stroke-dasharray": "30 70",
-				"stroke-dashoffset": "50",
+				"stroke-dasharray": this.segmentDashArray,
+				"stroke-dashoffset": this.segmentDashOffset,
 				stroke: this.fill,
-				"stroke-width": 3
+				"stroke-width": this.strokeWidth
 			} )
 		);
 
@@ -97,13 +107,15 @@ class Gauge{
 		);
 
 		let gaugeElement = this.svg( "svg", { 
-				viewBox: "0 0 42 42",
-				width: "100px",
-				height: "100px",
+				viewBox: "0 0 " + this.size + " " + this.size,
+				width: this.size + "px",
+				height: this.size + "px",
 				class: "gauge" 
 		}, SVGInner );
 		
 		this.container.appendChild( gaugeElement );
+		document.getElementById( "gauge-number-" + this.element ).textContent = this.start;
+		document.getElementById( "gauge-label-" + this.element ).textContent = this.label;	
 	};
 
 	/**
@@ -131,19 +143,19 @@ class Gauge{
 	//p1: The final number
 	//u: The progress. It is given in percentage, between 0 and 1
 	
-	lerp( p0, p1, u ){
+	lerp( p0, p1, u ) {
 		//return p0 + ( p1 - p0 ) * ( 1 - u );
 		return p0 + ( p1 - p0 ) * u;
 	};
 
 	onUpdate( position ){
-		document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dasharray", position + " " + ( this.max - position ) );
-		document.getElementById( "gauge-number-" + this.element ).textContent = parseInt( position * 2 );
+		let circleProgress = position * this.step;
+		document.getElementById( "gauge-segment-" + this.element ).setAttribute( "stroke-dasharray", circleProgress + " " + ( this.circleLength - circleProgress ) );
+		document.getElementById( "gauge-number-" + this.element ).textContent = parseInt( position );
 	};
 
 	onComplete(){
 		//console.log("complete");
-
 	};
 
 	animate() {

@@ -169,4 +169,21 @@ ul.menu li a.menu_item {
     height: "230px";
 }
 
+.teamstat1{
+    display: flex;
+    flex-direction: column;
+}
+
+.teamstat1-container{
+    display: flex;
+}
+
+.teamstat1-leftPart{
+    display: flex;
+}
+
+.teamstat1-rightPart{
+    display: flex;
+}
+
 

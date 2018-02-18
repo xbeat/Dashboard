@@ -1,15 +1,20 @@
 class Bar{
-	constructor( start = 10, stop = 100, duration = 1500, element, label = "", fill, container = document.body ) {
+	constructor( width = 100, height = 20, strokeWidth = 3, start = 10, stop = 100, duration = 1500, element, label = "", fill, container = document.body ) {
 
 		this.SVG_NS = "http://www.w3.org/2000/svg";
 		this.ease = Easing.easeOutQuint;
 		this.start = start;
 		this.stop = stop > 100 ? 100 : stop;  
 		this.max = 100;
+		this.width = width;
+		this.height = height;
 		this.fill = fill;
+		this.strokeWidth = strokeWidth;
 		this.duration = duration;
 		this.container = container;
 		this.element = element;
+		this.step = ( this.width / this.max );	
+		
 		this.initializeBar();	
 
 		document.getElementById( "bar-number-" + this.element ).textContent = this.start;
@@ -26,12 +31,12 @@ class Bar{
 		SVGInner.push( this.svg( "line", {
 				class: "bar-background",
 				x1: 0,
-				y1: 21,
-				x2: 100,
-				y2: 21,
+				y1: this.height,
+				x2: this.width,
+				y2: this.height,
 				fill: "transparent",
 				stroke: "#d2d3d4",
-				"stroke-width": "6"
+				"stroke-width": this.strokeWidth
 			} )
 		);
 
@@ -39,20 +44,20 @@ class Bar{
 				id: "bar-segment-" + this.element,
 				class: "bar-segment",
 				x1: 0,
-				y1: 21,
-				x2: this.start,
-				y2: 21,
+				y1: this.height,
+				x2: this.start * this.step,
+				y2: this.height,
 				fill: "transparent",
 				stroke: this.fill,
-				"stroke-width": 6
+				"stroke-width": this.strokeWidth
 			} )
 		);
 
 		let SVGInnerText = new Array;
 		SVGInnerText.push( this.svg( "text", {
 				id: "bar-number-" + this.element,
-				x: "90px",
-				y: "15px",
+				x: "90%",
+				y: "50%",
 				fill: "#fff",
 				class: "bar-number"
 			} )
@@ -60,8 +65,8 @@ class Bar{
 
 		SVGInnerText.push( this.svg( "text", {
 				id: "bar-label-" + this.element,
-				x: "15px",
-				y: "15px",
+				x: "15%",
+				y: "50%",
 				fill: "#fff",
 				class: "bar-label"
 			} )
@@ -73,9 +78,9 @@ class Bar{
 		);
 
 		let barElement = this.svg( "svg", { 
-				viewBox: "0 0 100 30",
-				width: "100px",
-				height: "30px"
+				viewBox: "0 0 " + this.width + " " + this.height,
+				width: this.width + "px",
+				height: this.height + "px"
 		}, SVGInner );
 		
 		this.container.appendChild( barElement );
@@ -112,7 +117,7 @@ class Bar{
 	};
 
 	onUpdate( position ){
-		document.getElementById( "bar-segment-" + this.element ).setAttribute( "x2", position );
+		document.getElementById( "bar-segment-" + this.element ).setAttribute( "x2", position * this.step );
 		document.getElementById( "bar-number-" + this.element ).textContent = parseInt( position );
 	};
 

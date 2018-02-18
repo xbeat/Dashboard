@@ -37,10 +37,9 @@
 			ATTRIBUTE contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
 
 			<!-- multiple segment -->
-			<svg width="100px" height="100px" viewBox="0 0 42 42" class="gauge">
+			<svg width="100px" height="100px" viewBox="0 0 100 100" class="gauge">
 			  <circle class="gauge-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
 			  <circle class="gauge-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
-
 			  <circle class="gauge-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="40 60" stroke-dashoffset="25"></circle>
 			  <circle class="gauge-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#b1c94e" stroke-width="3" stroke-dasharray="20 80" stroke-dashoffset="85"></circle>
 			  <circle class="gauge-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#377bbc" stroke-width="3" stroke-dasharray="30 70" stroke-dashoffset="65"></circle>
@@ -56,15 +55,15 @@
 			<div id="attribute-column1" class="attribute-column">
 
 				<script>
-					let gaugeHalf1 = new Gauge( 20, 100, 1500, "half", "-Half1", "PACE", "#ce4b99", document.getElementById("attribute-column1") ); 
+					let gaugeHalf1 = new Gauge( 100, 6, 20, 80, 1500, "half", "-Half1", "PACE", "#ce4b99", document.getElementById("attribute-column1") ); 
 				</script>
 				<button onclick = "gaugeHalf1.animate();">Animate</button>
 
 				<script>
-					let barHalf1 = new Bar( 5, 100, 1500, "-HalfA1", "PACE", "#ce4b99", document.getElementById("attribute-column1") );
-					barHalf1 = new Bar( 5, 100, 1500, "-HalfA2", "PACE", "#ce4b99", document.getElementById("attribute-column1") );
-					barHalf1 = new Bar( 5, 100, 1500, "-HalfA3", "PACE", "#ce4b99", document.getElementById("attribute-column1") );
-					barHalf1 = new Bar( 5, 100, 1500, "-HalfA4", "PACE", "#ce4b99", document.getElementById("attribute-column1") ); 
+					let barHalf1 = new Bar( 200, 40, 10, 5, 100, 1500, "-HalfA1", "PASS", "#ce4b99", document.getElementById("attribute-column1") );
+					barHalf1 = new Bar( 100, 20, 6, 5, 100, 1500, "-HalfA2", "PACE", "#ce4b99", document.getElementById("attribute-column1") );
+					barHalf1 = new Bar( 100, 20, 6, 5, 100, 1500, "-HalfA3", "PACE", "#ce4b99", document.getElementById("attribute-column1") );
+					barHalf1 = new Bar( 190, 40, 12, 55, 100, 1500, "-HalfA4", "PACE", "#ce4b99", document.getElementById("attribute-column1") ); 
 				</script>
 				<button onclick = "barHalf1.animate();">Animate</button>
 
@@ -72,12 +71,12 @@
 
 			<div id="attribute-column2" class="attribute-column">
 				<script>
-					let gaugeHalf2 = new Gauge( 20, 65, 1500, "half", "-Half2", "SHOOTING", "#b1c94e", document.getElementById("attribute-column2") );
+					let gaugeHalf2 = new Gauge( 100, 6, 45, 100, 1500, "full", "-Half2", "SHOOTING", "#b1c94e", document.getElementById("attribute-column2") );
 				</script>
 				<button onclick = "gaugeHalf2.animate();">Animate</button>
 
 				<script>
-					let barHalf2 = new Bar( 5, 100, 1500, "-Half2", "PACE", "#ce4b99", document.getElementById("attribute-column2") ); 
+					let barHalf2 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half2", "PACE", "#ce4b99", document.getElementById("attribute-column2") ); 
 				</script>
 				<button onclick = "barHalf2.animate();">Animate</button>				
 
@@ -85,12 +84,12 @@
 
 			<div id="attribute-column3" class="attribute-column">
 				<script>
-					let gaugeHalf3 = new Gauge( 20, 65, 1500, "half", "-Half3", "PASSING", "#377bbc", document.getElementById("attribute-column3") );
+					let gaugeHalf3 = new Gauge( 100, 6, 20, 65, 1500, "half", "-Half3", "PASSING", "#377bbc", document.getElementById("attribute-column3") );
 				</script>
 				<button onclick = "gaugeHalf3.animate();">Animate</button>
 
 				<script>
-					let barHalf3 = new Bar( 5, 100, 1500, "-Half3", "PACE", "#ce4b99", document.getElementById("attribute-column3") ); 
+					let barHalf3 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half3", "PACE", "#ce4b99", document.getElementById("attribute-column3") ); 
 				</script>
 				<button onclick = "barHalf3.animate();">Animate</button>
 
@@ -98,12 +97,12 @@
 
 			<div id="attribute-column4" class="attribute-column">
 				<script>
-					let gaugeHalf4 = new Gauge( 20, 65, 1500, "half", "-Half4", "DRIBBLING", "#377bbc", document.getElementById("attribute-column4") );
+					let gaugeHalf4 = new Gauge( 100, 6, 20, 65, 1500, "half", "-Half4", "DRIBBLING", "#377bbc", document.getElementById("attribute-column4") );
 				</script>
 				<button onclick = "gaugeHalf4.animate();">Animate</button>
 
 				<script>
-					let barHalf4 = new Bar( 5, 100, 1500, "-Half4", "PACE", "#ce4b99", document.getElementById("attribute-column4") ); 
+					let barHalf4 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half4", "PACE", "#ce4b99", document.getElementById("attribute-column4") ); 
 				</script>
 				<button onclick = "barHalf4.animate();">Animate</button>
 
@@ -111,12 +110,12 @@
 
 			<div id="attribute-column5" class="attribute-column">
 				<script>
-					let gaugeHalf5 = new Gauge( 20, 65, 1500, "half", "-Half5", "DEFENDING", "#377bbc", document.getElementById("attribute-column5") );
+					let gaugeHalf5 = new Gauge( 100, 6, 20, 65, 1500, "half", "-Half5", "DEFENDING", "#377bbc", document.getElementById("attribute-column5") );
 				</script>
 				<button onclick = "gaugeHalf5.animate();">Animate</button>
 
 				<script>
-					let barHalf5 = new Bar( 5, 100, 1500, "-Half5", "PACE", "#ce4b99", document.getElementById("attribute-column5") ); 
+					let barHalf5 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half5", "PACE", "#ce4b99", document.getElementById("attribute-column5") ); 
 				</script>
 				<button onclick = "barHalf5.animate();">Animate</button>
 
@@ -124,12 +123,12 @@
 
 			<div id="attribute-column6" class="attribute-column">
 				<script>
-					let gaugeHalf6 = new Gauge( 20, 65, 1500, "half", "-Half6", "PHYSICAL", "#377bbc", document.getElementById("attribute-column6") );
+					let gaugeHalf6 = new Gauge( 100, 6, 20, 65, 1500, "half", "-Half6", "PHYSICAL", "#377bbc", document.getElementById("attribute-column6") );
 				</script>
 				<button onclick = "gaugeHalf6.animate();">Animate</button>
 
 				<script>
-					let barHalf6 = new Bar( 5, 100, 1500, "-Half6", "PACE", "#ce4b99", document.getElementById("attribute-column6") ); 
+					let barHalf6 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half6", "PACE", "#ce4b99", document.getElementById("attribute-column6") ); 
 				</script>
 				<button onclick = "barHalf6.animate();">Animate</button>				
 
@@ -145,8 +144,25 @@
 			<li><a href="#" data-id="teamStat2" data-color="#b1c94e" class="menu_item tab">Team Stat 2</a></li>
 			<li><a href="#" data-id="teamStat3" data-color="#b1c94e" class="menu_item tab">Team Stat 3</a></li>
 		</ul>
-		<div class="content active" id="teamStat1">
-			Team Stat 1 about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about 
+		<div class="content active teamstat1" id="teamStat1">
+			<div class="teamstat1-container">
+				<div id="teamstat1-leftPart" class="teamstat1-leftPart">
+					<script>
+						let gaugeFullTs1Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs1L", "Shot Arruracy", "#ce4b99", document.getElementById("teamstat1-leftPart") );
+						let gaugeFullTs2Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs2L", "Pass Arruracy", "#ce4b99", document.getElementById("teamstat1-leftPart") );
+					</script>
+					<button onclick = "gaugeFullTs1Left.animate();">Animate</button>
+					<button onclick = "gaugeFullTs2Left.animate();">Animate</button>
+				</div>
+				<div id="teamstat1-rightPart" class="teamstat1-rightPart">
+					<script>
+						let gaugeFullTs1Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs1R", "Shot Arruracy", "#ce4b99", document.getElementById("teamstat1-rightPart") );
+						let gaugeFullTs2Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs2R", "Pass Arruracy", "#ce4b99", document.getElementById("teamstat1-rightPart") );
+					</script>
+					<button onclick = "gaugeFullTs1Right.animate();">Animate</button>
+					<button onclick = "gaugeFullTs2Right.animate();">Animate</button>					
+				</div>
+			</div>
 		</div>
 		<div class="content" id="teamStat2">
 			Team Stat 2details service service service service service service service service service service service service service service service service service service service service service service service service service

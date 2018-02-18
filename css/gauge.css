@@ -7,14 +7,14 @@
 }
 
 .gauge-number {
-  font-size: 0.6em;
+  font-size: 1.2em;
   line-height: 1;
   text-anchor: middle;
   transform: translateY(-0.25em);
 }
 
 .gauge-label {
-  font-size: 0.2em;
+  font-size: .8em;
   text-transform: uppercase;
   text-anchor: middle;
   transform: translateY(0.7em);
