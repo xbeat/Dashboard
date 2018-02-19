@@ -169,21 +169,85 @@ ul.menu li a.menu_item {
     height: "230px";
 }
 
-.teamstat1{
+.teamStat1{
     display: flex;
     flex-direction: column;
 }
 
-.teamstat1-container{
+.teamStat1-container{
     display: flex;
 }
 
-.teamstat1-leftPart{
+.teamStat1-leftPart{
     display: flex;
 }
 
-.teamstat1-rightPart{
+.teamStat1-rightPart{
     display: flex;
+}
+
+.gameStat1{
+    display: flex;
+    flex-direction: column;
+}
+
+.gameStat1-container{
+    display: flex;
+}
+
+.gameStat1-leftPart{
+    display: flex;
+}
+
+.gameStat1-rightPart{
+    display: flex;
+}
+
+#contain {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    height: 700px;
+    margin-top: 150px;
+}
+
+.table {
+    width: 350px;
+    height: 377px;
+    display: inline-block;
+    /*border:3px solid rgba(39, 44, 48, 0.36); */
+    float: left;
+    background: #171A1D;
+    margin-left: 20px;
+}
+
+.table .head {
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    min-height: 10px;
+    line-height: 5px;
+}
+
+.bio ul, .detail ul {
+    list-style: none;
+    padding: 20px;
+}
+.bio ul li, .detail ul li {
+    margin-bottom: 5px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #8C8C8C;
+}
+
+.yellow {
+    border-bottom: 5px solid #FDA202;
+}
+
+#table.bio {
+    background: #15181B;
 }
 
 

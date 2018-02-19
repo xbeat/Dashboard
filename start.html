@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/bar.css" />
 	<link rel="stylesheet" href="css/timeline.css" />
 	<link rel="stylesheet" href="css/tactics.css" />
+	<link rel="stylesheet" href="css/comparison.css" />
 	<script type="text/javascript" src="js/gauge.js"></script>
 	<script type="text/javascript" src="js/bar.js"></script>
 </head>
@@ -32,27 +33,61 @@
 		<ul class="menu">
 			<li><a href="#" data-id="bio" data-color="#ce4b99" class="active tab">PLAYER BIO</a></li>
 			<li><a href="#" data-id="details" data-color="#ce4b99" class="menu_item tab">PLAYER DETAILS</a></li>
-			<li><a href="#" data-id="attribute" data-color="#ce4b99" class="menu_item tab">ATTRIBUTE DETAILS</a></li>
 		</ul>
 		<div class="content active" id="bio">
 
-			ATTRIBUTE contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
+			<div id="contain">
+			  <div class="table">
+			    <div class="head yellow">PLAYER DATA</div>
 
-			<!-- multiple segment -->
-			<svg width="100px" height="100px" viewBox="0 0 100 100" class="gauge">
-			  <circle class="gauge-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
-			  <circle class="gauge-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
-			  <circle class="gauge-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="40 60" stroke-dashoffset="25"></circle>
-			  <circle class="gauge-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#b1c94e" stroke-width="3" stroke-dasharray="20 80" stroke-dashoffset="85"></circle>
-			  <circle class="gauge-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#377bbc" stroke-width="3" stroke-dasharray="30 70" stroke-dashoffset="65"></circle>
-			  <!-- unused 10% -->
-			</svg>
+			    <div class="bio">
+			      <ul>
+			        <li>Name</li>
+			        <li>Ben Foster</li>
+			        <li>Know As</li>
+			        <li>-</li>
+			        <li>Date of Birth</li>
+   			        <li>03/04/1983</li>
+			        <li>Height</li>
+			        <li>6'4"</li>
+			        <li>Save Technique</li>
+			        <li>Traditional</li>
+			        <li>Preferred Foot</li>
+   			        <li>Left</li>
+			        <li>Weak Foot</li>
+			        <li>***--</li>
+			        <li>Skill Moves</li>
+			        <li>*----</li>
+			      </ul>
+			    </div>
+			  </div>
+			  <div class="table" >
+			    <div class="head yellow">PLAYER DETAIL</div>
 
+			    <div class="detail">
+			      <ul>
+			        <li>Bought For</li>
+			        <li>-</li>
+			        <li>Number of Owners</li>
+			        <li>2</li>
+			        <li>Trade Status</li>
+   			        <li>Tradable</li>
+			        <li>Games Played (Other Clubs/Your Club)</li>
+			        <li>0 (0/0)</li>
+			        <li>Goal Scored (Other Clubs/Your Club)</li>
+			        <li>0 (0/0)</li>
+			        <li>Assists (Other Clubs/Your Club)</li>
+			        <li>0 (0/0)</li>
+			        <li>Yellow Card (Other Clubs/Your Club)</li>
+			        <li>0 (0/0)</li>
+			        <li>Red Card (Other Clubs/Your Club)</li>
+			        <li>0 (0/0)</li>
+			      </ul>
+			    </div>
+			  </div>			  
+			</div>
 		</div>
 		<div class="content" id="details">
-			DETAILS service service service service service service service service service service service service service service service service service service service service service service service service service
-		</div>
-		<div class="content" id="attribute">
 
 			<div id="attribute-column1" class="attribute-column">
 
@@ -143,34 +178,26 @@
 	<div id="teamStatsContainer" class="teamStatsContainer tab_content">
 		<ul class="menu">
 			<li><a href="#" data-id="teamStat1" data-color="#b1c94e" class="active tab">Team Stat 1</a></li>
-			<li><a href="#" data-id="teamStat2" data-color="#b1c94e" class="menu_item tab">Team Stat 2</a></li>
-			<li><a href="#" data-id="teamStat3" data-color="#b1c94e" class="menu_item tab">Team Stat 3</a></li>
 		</ul>
-		<div class="content active teamstat1" id="teamStat1">
-			<div class="teamstat1-container">
-				<div id="teamstat1-leftPart" class="teamstat1-leftPart">
+		<div class="content active teamStat1" id="teamStat1">
+			<div class="teamStat1-container">
+				<div id="teamStat1-leftPart" class="teamStat1-leftPart">
 					<script>
-						let gaugeFullTs1Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs1L", "Shot Arruracy", "#ce4b99", document.getElementById("teamstat1-leftPart") );
-						let gaugeFullTs2Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs2L", "Pass Arruracy", "#ce4b99", document.getElementById("teamstat1-leftPart") );
+						let gaugeFullTs1Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs1L", "Shot Arruracy", "#ce4b99", document.getElementById("teamStat1-leftPart") );
+						let gaugeFullTs2Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs2L", "Pass Arruracy", "#ce4b99", document.getElementById("teamStat1-leftPart") );
 					</script>
 					<button onclick = "gaugeFullTs1Left.animate();">Animate</button>
 					<button onclick = "gaugeFullTs2Left.animate();">Animate</button>
 				</div>
-				<div id="teamstat1-rightPart" class="teamstat1-rightPart">
+				<div id="teamStat1-rightPart" class="teamStat1-rightPart">
 					<script>
-						let gaugeFullTs1Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs1R", "Shot Arruracy", "#ce4b99", document.getElementById("teamstat1-rightPart") );
-						let gaugeFullTs2Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs2R", "Pass Arruracy", "#ce4b99", document.getElementById("teamstat1-rightPart") );
+						let gaugeFullTs1Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs1R", "Shot Arruracy", "#ce4b99", document.getElementById("teamStat1-rightPart") );
+						let gaugeFullTs2Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs2R", "Pass Arruracy", "#ce4b99", document.getElementById("teamStat1-rightPart") );
 					</script>
 					<button onclick = "gaugeFullTs1Right.animate();">Animate</button>
 					<button onclick = "gaugeFullTs2Right.animate();">Animate</button>					
 				</div>
 			</div>
-		</div>
-		<div class="content" id="teamStat2">
-			Team Stat 2details service service service service service service service service service service service service service service service service service service service service service service service service service
-		</div>
-		<div class="content" id="teamStat3">
-			Team Stat 3attribute contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
 		</div>
 	</div>
 	
@@ -178,10 +205,77 @@
 	<div id="playerComparisonContainer" class="playerComparisonContainer tab_content">
 		<ul class="menu">
 			<li><a href="#" data-id="comp1" data-color="#377bbc" class="active tab">Player 1</a></li>
-			<li><a href="#" data-id="comp2" data-color="#377bbc" class="menu_item tab">Player 2</a></li>
 		</ul>
 		<div class="content active" id="comp1">
-			Player 1 about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about about 
+		    <div class="centerStat">
+		        <div class="centerstatRow">
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">SHOT ON GOAL</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">SHOT OFF GOAL</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">  
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">ASSIST</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">  
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">OFFSIDES</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">  
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">LOST POSSESSION</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">  
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">REGAINED POSSESSION</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">  
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">CORNERS</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">  
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">FOULS SUFFERED</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">  
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">YELLOW CARDS</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">  
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">RED CARDS</div>
+		            <div class="rightStat">2</div>
+		        </div>
+		        <div class="centerstatRow">  
+		            <div class="leftStat">1</div>
+		            <div class="statContainer">POSSESSION</div>
+		            <div class="rightStat">2</div>   
+		        </div>
+		    </div>
+
+		    <!-- Scoreboard central big -->
+		        <div class="scoreBoardBigBottom">
+		            <div class="leftPartBottom">FC INTERNAZIONALE</div>
+		            <div class="scoreBottomContainer">
+		                <div class="scoreBottom">0-1</div>
+		            </div>
+		            <div class="rightPartBottom">VILLARREAL CF</div>
+		        </div>
+		    </div>
+
+
 		</div>
 		<div class="content" id="comp2">
 			Player 2 service service service service service service service service service service service service service service service service service service service service service service service service service
@@ -192,70 +286,82 @@
 	<div id="gameStatsContainer" class="gameStatsContainer tab_content">
 		<ul class="menu">
 			<li><a href="#" data-id="gameStat1" data-color="#fa8f09" class="active tab">Game Stat 1</a></li>
-			<li><a href="#" data-id="gameStat2" data-color="#fa8f09" class="menu_item tab">Game Stat 2</a></li>
-			<li><a href="#" data-id="gameStat3" data-color="#fa8f09" class="menu_item tab">Game Stat 3</a></li>
 		</ul>
-		<div class="content active" id="gameStat1">
-			  <div class="Timeline">
-			    <svg height="5" width="200">
-			      <line x1="0" y1="0" x2="200" y2="0" style="stroke:#004165; stroke-width:5" />
-			    </svg>
+		<div class="gameStat1 content active" id="gameStat1">
 
-			    <div class="event1">
-			      <div class="event1Bubble">
-			        <div class="eventTime">
-			          <div class="DayDigit">MESSI</div>
-			        </div>
-			        <div class="eventTitle">GOAL</div>
-			      </div>
-			      <svg height="20" width="20">
-			        <circle cx="10" cy="11" r="5" fill="#004165" />
-			      </svg>
-			      <div class="time">9'</div>
-			    </div>
+			<div class="gameStat1-container">
+				<div id="gameStat1-leftPart" class="gameStat1-leftPart">
+					<script>
+						let gaugeFullGs1Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullGs1L", "Shot Arruracy", "#ce4b99", document.getElementById("gameStat1-leftPart") );
+						let gaugeFullGs2Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullGs2L", "Pass Arruracy", "#ce4b99", document.getElementById("gameStat1-leftPart") );
+					</script>
+					<button onclick = "gaugeFullGs1Left.animate();">Animate</button>
+					<button onclick = "gaugeFullGs2Left.animate();">Animate</button>
+				</div>
+				<div id="gameStat1-rightPart" class="gameStat1-rightPart">
+					<script>
+						let gaugeFullGs1Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullGs1R", "Shot Arruracy", "#ce4b99", document.getElementById("gameStat1-rightPart") );
+						let gaugeFullGs2Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullGs2R", "Pass Arruracy", "#ce4b99", document.getElementById("gameStat1-rightPart") );
+					</script>
+					<button onclick = "gaugeFullGs1Right.animate();">Animate</button>
+					<button onclick = "gaugeFullGs2Right.animate();">Animate</button>					
+				</div>
+			</div>
 
-			    <svg height="5" width="300">
-			      <line x1="0" y1="0" x2="300" y2="0" style="stroke:#004165; stroke-width:5" />
-			    </svg>
+			<div class="Timeline">
+				<svg height="5" width="200">
+				  <line x1="0" y1="0" x2="200" y2="0" style="stroke:#004165; stroke-width:5" />
+				</svg>
 
-			    <div class="event2">
-			      <div class="event2Bubble">
-			        <div class="eventTime">
-			          <div class="DayDigit">MESSI</div>
-			        </div>
-			        <div class="eventTitle">RED CARD</div>
-			      </div>
-			      <svg height="20" width="20">
-			        <circle cx="10" cy="11" r="5" fill="#004165" />
-			      </svg>
-			      <div class="time2">32'</div>
-			    </div>
+				<div class="event1">
+				  <div class="event1Bubble">
+				    <div class="eventTime">
+				      <div class="DayDigit">MESSI</div>
+				    </div>
+				    <div class="eventTitle">GOAL</div>
+				  </div>
+				  <svg height="20" width="20">
+				    <circle cx="10" cy="11" r="5" fill="#004165" />
+				  </svg>
+				  <div class="time">9'</div>
+				</div>
 
-			    <svg height="5" width="50">
-			      <line x1="0" y1="0" x2="50" y2="0" style="stroke:#004165; stroke-width:5" />
-			    </svg>
+				<svg height="5" width="300">
+				  <line x1="0" y1="0" x2="300" y2="0" style="stroke:#004165; stroke-width:5" />
+				</svg>
 
-			    <div class="now">40'</div>
+				<div class="event2">
+				  <div class="event2Bubble">
+				    <div class="eventTime">
+				      <div class="DayDigit">MESSI</div>
+				    </div>
+				    <div class="eventTitle">RED CARD</div>
+				  </div>
+				  <svg height="20" width="20">
+				    <circle cx="10" cy="11" r="5" fill="#004165" />
+				  </svg>
+				  <div class="time2">32'</div>
+				</div>
 
-			    <svg height="5" width="150">
-			        <line x1="0" y1="0" x2="150" y2="0" style="stroke:#004165;stroke-width:5" /> 
-			    </svg>
+				<svg height="5" width="50">
+				  <line x1="0" y1="0" x2="50" y2="0" style="stroke:#004165; stroke-width:5" />
+				</svg>
 
-			    <svg height="20" width="42">
-			      <line x1="1" y1="0" x2="1" y2="20" style="stroke:#004165;stroke-width:2" /> 
-			      <circle cx="11" cy="10" r="3" fill="#004165" />  
-			      <circle cx="21" cy="10" r="3" fill="#004165" />  
-			      <circle cx="31" cy="10" r="3" fill="#004165" />    
-			      <line x1="41" y1="0" x2="41" y2="20" style="stroke:#004165;stroke-width:2" /> 
-			    </svg>
+				<div class="now">40'</div>
 
-			  </div> 
-		</div>
-		<div class="content" id="gameStat2">
-			Game Stat2 service service service service service service service service service service service service service service service service service service service service service service service service service
-		</div>
-		<div class="content" id="gameStat3">
-			Game Stat3 contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
+				<svg height="5" width="150">
+				    <line x1="0" y1="0" x2="150" y2="0" style="stroke:#004165;stroke-width:5" /> 
+				</svg>
+
+				<svg height="20" width="42">
+				  <line x1="1" y1="0" x2="1" y2="20" style="stroke:#004165;stroke-width:2" /> 
+				  <circle cx="11" cy="10" r="3" fill="#004165" />  
+				  <circle cx="21" cy="10" r="3" fill="#004165" />  
+				  <circle cx="31" cy="10" r="3" fill="#004165" />    
+				  <line x1="41" y1="0" x2="41" y2="20" style="stroke:#004165;stroke-width:2" /> 
+				</svg>
+
+			</div> 
 		</div>
 	</div>
 
@@ -263,8 +369,6 @@
 	<div id="gameTacticsContainer" class="gameTacticsContainer tab_content">
 		<ul class="menu">
 			<li><a href="#" data-id="gameTact1" data-color="#e5be03" class="active tab">Game Tactics 1</a></li>
-			<li><a href="#" data-id="gameTact2" data-color="#e5be03" class="menu_item tab">Game Tactics 2</a></li>
-			<li><a href="#" data-id="gameTact3" data-color="#e5be03" class="menu_item tab">Game Tactics 3</a></li>
 		</ul>
 		<div class="content active" id="gameTact1">
 			<div class="pitch">
@@ -315,12 +419,6 @@
 			
 			<div id="formationV"></div>
 			<div id="formationJerseyContainerV"></div>
-		</div>
-		<div class="content" id="gameTact2">
-			Tacts2 service service service service service service service service service service service service service service service service service service service service service service service service service
-		</div>
-		<div class="content" id="gameTact3">
-			Tacts3 contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact
 		</div>
 	</div>
 
