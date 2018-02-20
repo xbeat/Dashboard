@@ -21,7 +21,7 @@
 	<div class = "mainContainer">
 		<ul class="menu">
 			<li><a href="#" data-id="playerStatsContainer" data-color="#ce4b99" class="active tab">PLAYER STATISTICS</a></li>
-			<li><a href="#" data-id="teamStatsContainer" data-color="#b1c94e" class="menu_item tab">TEAMS STATISTICS</a></li>
+			<li><a href="#" data-id="teamStatsContainer" data-color="#b1c94e" class="menu_item tab">TEAMS RANK</a></li>
 			<li><a href="#" data-id="playerComparisonContainer" data-color="#377bbc" class="menu_item tab">PLAYER COMPARISON</a></li>
 			<li><a href="#" data-id="gameStatsContainer" data-color="#fa8f09" class="menu_item tab">GAME STATISTICS</a></li>
 			<li><a href="#" data-id="gameTacticsContainer" data-color="#e5be03" class="menu_item tab">GAME TACTICS</a></li>
@@ -186,26 +186,59 @@
 	<!-- Team Stat -->
 	<div id="teamStatsContainer" class="teamStatsContainer tab_content">
 		<ul class="menu">
-			<li><a href="#" data-id="teamStat1" data-color="#b1c94e" class="active tab">Team Stat 1</a></li>
+			<li><a href="#" data-id="teamStat1" data-color="#b1c94e" class="active tab">TEAM RANK</a></li>
 		</ul>
 		<div class="content active teamStat1" id="teamStat1">
-			<div class="teamStat1-container">
-				<div id="teamStat1-leftPart" class="teamStat1-leftPart">
-					<script>
-						let gaugeFullTs1Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs1L", "Shot Arruracy", "#ce4b99", document.getElementById("teamStat1-leftPart") );
-						let gaugeFullTs2Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs2L", "Pass Arruracy", "#ce4b99", document.getElementById("teamStat1-leftPart") );
-					</script>
-					<button onclick = "gaugeFullTs1Left.animate();">Animate</button>
-					<button onclick = "gaugeFullTs2Left.animate();">Animate</button>
+			<div id="player-data">
+				<div class="table">
+					<div class="head">TEAM RANK</div>
+
+					<div class="bio">
+						<ul>
+							<li>Name</li>
+							<li>Ben Foster</li>
+							<li>Know As</li>
+							<li>-</li>
+							<li>Date of Birth</li>
+							<li>03/04/1983</li>
+							<li>Height</li>
+							<li>6'4"</li>
+							<li>Save Technique</li>
+							<li>Traditional</li>
+							<li>Preferred Foot</li>
+							<li>Left</li>
+							<li>Weak Foot</li>
+							<li>***--</li>
+							<li>Skill Moves</li>
+							<li>*----</li>
+						</ul>
+					</div>
 				</div>
-				<div id="teamStat1-rightPart" class="teamStat1-rightPart">
-					<script>
-						let gaugeFullTs1Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs1R", "Shot Arruracy", "#ce4b99", document.getElementById("teamStat1-rightPart") );
-						let gaugeFullTs2Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullTs2R", "Pass Arruracy", "#ce4b99", document.getElementById("teamStat1-rightPart") );
-					</script>
-					<button onclick = "gaugeFullTs1Right.animate();">Animate</button>
-					<button onclick = "gaugeFullTs2Right.animate();">Animate</button>					
-				</div>
+
+				<div class="table" >
+					<div class="head">TEAM STAT</div>
+
+					<div class="detail">
+						<ul>
+							<li>Bought For</li>
+							<li>-</li>
+							<li>Number of Owners</li>
+							<li>2</li>
+							<li>Trade Status</li>
+							<li>Tradable</li>
+							<li>Games Played (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+							<li>Goal Scored (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+							<li>Assists (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+							<li>Yellow Card (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+							<li>Red Card (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+						</ul>
+					</div>
+				</div>			  
 			</div>
 		</div>
 	</div>
@@ -275,15 +308,13 @@
 		    </div>
 
 		    <!-- Scoreboard central big -->
-		        <div class="scoreBoardBigBottom">
-		            <div class="leftPartBottom">FC INTERNAZIONALE</div>
-		            <div class="scoreBottomContainer">
-		                <div class="scoreBottom">0-1</div>
-		            </div>
-		            <div class="rightPartBottom">VILLARREAL CF</div>
-		        </div>
-		    </div>
-
+	        <div class="scoreBoardBigBottom">
+	            <div class="leftPartBottom">FC INTERNAZIONALE</div>
+	            <div class="scoreBottomContainer">
+	                <div class="scoreBottom">0-1</div>
+	            </div>
+	            <div class="rightPartBottom">VILLARREAL CF</div>
+	        </div>
 
 		</div>
 		<div class="content" id="comp2">
@@ -294,27 +325,43 @@
 	<!-- Game Stat -->
 	<div id="gameStatsContainer" class="gameStatsContainer tab_content">
 		<ul class="menu">
-			<li><a href="#" data-id="gameStat1" data-color="#fa8f09" class="active tab">Game Stat 1</a></li>
+			<li><a href="#" data-id="gameStat1" data-color="#fa8f09" class="active tab">Game Stat </a></li>
 		</ul>
 		<div class="gameStat1 content active" id="gameStat1">
+
+		    <!-- Scoreboard central big -->
+	        <div class="scoreBoardBigBottom">
+	            <div class="leftPartBottom">FC INTERNAZIONALE</div>
+	            <div class="scoreBottomContainer">
+	                <div class="scoreBottom">0-1</div>
+	            </div>
+	            <div class="rightPartBottom">VILLARREAL CF</div>
+	        </div>
 
 			<div class="gameStat1-container">
 				<div id="gameStat1-leftPart" class="gameStat1-leftPart">
 					<script>
-						let gaugeFullGs1Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullGs1L", "Shot Arruracy", "#ce4b99", document.getElementById("gameStat1-leftPart") );
-						let gaugeFullGs2Left = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullGs2L", "Pass Arruracy", "#ce4b99", document.getElementById("gameStat1-leftPart") );
+
+						let gameStat = new Array();
+						gameStat.push( new Array() );
+						gameStat[0].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat0", "Shot Arruracy", "#ce4b99", document.getElementById("gameStat1-leftPart") ) );
+						gameStat[0].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat1", "Pass Arruracy", "#ce4b99", document.getElementById("gameStat1-leftPart") ) );
+						gameStat[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-gameStat2", "Stamina", "#ce4b99", document.getElementById( "gameStat1-leftPart" ) ) );
+
 					</script>
-					<button onclick = "gaugeFullGs1Left.animate();">Animate</button>
-					<button onclick = "gaugeFullGs2Left.animate();">Animate</button>
 				</div>
 				<div id="gameStat1-rightPart" class="gameStat1-rightPart">
 					<script>
-						let gaugeFullGs1Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullGs1R", "Shot Arruracy", "#ce4b99", document.getElementById("gameStat1-rightPart") );
-						let gaugeFullGs2Right = new Gauge( 150, 6, 20, 100, 1500, "full", "-FullGs2R", "Pass Arruracy", "#ce4b99", document.getElementById("gameStat1-rightPart") );
+
+						gameStat.push( new Array() );
+						gameStat[1].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat3", "Shot Arruracy", "#ce4b99", document.getElementById("gameStat1-rightPart") ) );
+						gameStat[1].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat4", "Pass Arruracy", "#ce4b99", document.getElementById("gameStat1-rightPart") ) );
+						gameStat[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-gameStat5", "Jumping", "#ce4b99", document.getElementById( "gameStat1-rightPart" ) ) );
+
 					</script>
-					<button onclick = "gaugeFullGs1Right.animate();">Animate</button>
-					<button onclick = "gaugeFullGs2Right.animate();">Animate</button>					
 				</div>
+				<button onclick = "gaugeFullGs2Left.animate();">Animate</button>
+
 			</div>
 
 			<div class="Timeline">
