@@ -9,14 +9,12 @@
 .bar-number {
   font-size: 0.7em;
   line-height: 1;
-  text-anchor: middle;
   transform: translateY(-0.25em);
 }
 
 .bar-label {
   font-size: 0.7em;
   line-height: 1;
-  text-anchor: middle;
   transform: translateY(-0.25em);
 }
 

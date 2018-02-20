@@ -114,7 +114,7 @@ ul.menu li a.menu_item {
 
 .content {
     font-size: 14px;
-    padding: 7px 10px;
+    padding: 70px 10px;
     line-height: 1.4;
     background-color: rgba( 53, 61, 62, .7);
     color: #fff;
@@ -161,7 +161,15 @@ ul.menu li a.menu_item {
 .attribute-column{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 7px 10px;
+}
+
+#details{
+    align-items: flex-start;
+    justify-content: center;
+    border-top: 200px; 
 }
 
 .svg-bar{
@@ -203,21 +211,19 @@ ul.menu li a.menu_item {
     display: flex;
 }
 
-#contain {
+#player-data {
     display: flex;
     margin: 0 auto;
     width: 1200px;
     height: 700px;
-    margin-top: 150px;
 }
 
 .table {
-    width: 350px;
-    height: 377px;
-    display: inline-block;
+    width: 550px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
     /*border:3px solid rgba(39, 44, 48, 0.36); */
-    float: left;
-    background: #171A1D;
     margin-left: 20px;
 }
 
@@ -226,28 +232,28 @@ ul.menu li a.menu_item {
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
-    min-height: 10px;
-    line-height: 5px;
+    min-height: 50px;
+    background-color: #fa8f09;
 }
 
 .bio ul, .detail ul {
     list-style: none;
     padding: 20px;
 }
+
 .bio ul li, .detail ul li {
     margin-bottom: 5px;
     text-align: left;
     text-transform: uppercase;
-    font-size: 15px;
-    color: #8C8C8C;
+    font-size: 19px;
+    color: #dedede;
+    padding: 5px;
 }
 
-.yellow {
-    border-bottom: 5px solid #FDA202;
-}
-
-#table.bio {
-    background: #15181B;
+.bio ul li:nth-child(odd),
+.detail ul li:nth-child(odd) {
+    color: #0c0c0c;
+    background-color: rgba( 240, 240, 240, .5);
 }
 
 

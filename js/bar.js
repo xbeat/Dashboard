@@ -56,6 +56,7 @@ class Bar{
 		let SVGInnerText = new Array;
 		SVGInnerText.push( this.svg( "text", {
 				id: "bar-number-" + this.element,
+				"text-anchor": "end",
 				x: "90%",
 				y: "50%",
 				fill: "#fff",
@@ -65,7 +66,8 @@ class Bar{
 
 		SVGInnerText.push( this.svg( "text", {
 				id: "bar-label-" + this.element,
-				x: "15%",
+				"text-anchor": "start",
+				x: "5x",
 				y: "50%",
 				fill: "#fff",
 				class: "bar-label"

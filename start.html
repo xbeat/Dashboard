@@ -36,141 +36,150 @@
 		</ul>
 		<div class="content active" id="bio">
 
-			<div id="contain">
-			  <div class="table">
-			    <div class="head yellow">PLAYER DATA</div>
+			<div id="player-data">
+				<div class="table">
+					<div class="head">PLAYER DATA</div>
 
-			    <div class="bio">
-			      <ul>
-			        <li>Name</li>
-			        <li>Ben Foster</li>
-			        <li>Know As</li>
-			        <li>-</li>
-			        <li>Date of Birth</li>
-   			        <li>03/04/1983</li>
-			        <li>Height</li>
-			        <li>6'4"</li>
-			        <li>Save Technique</li>
-			        <li>Traditional</li>
-			        <li>Preferred Foot</li>
-   			        <li>Left</li>
-			        <li>Weak Foot</li>
-			        <li>***--</li>
-			        <li>Skill Moves</li>
-			        <li>*----</li>
-			      </ul>
-			    </div>
-			  </div>
-			  <div class="table" >
-			    <div class="head yellow">PLAYER DETAIL</div>
+					<div class="bio">
+						<ul>
+							<li>Name</li>
+							<li>Ben Foster</li>
+							<li>Know As</li>
+							<li>-</li>
+							<li>Date of Birth</li>
+							<li>03/04/1983</li>
+							<li>Height</li>
+							<li>6'4"</li>
+							<li>Save Technique</li>
+							<li>Traditional</li>
+							<li>Preferred Foot</li>
+							<li>Left</li>
+							<li>Weak Foot</li>
+							<li>***--</li>
+							<li>Skill Moves</li>
+							<li>*----</li>
+						</ul>
+					</div>
+				</div>
 
-			    <div class="detail">
-			      <ul>
-			        <li>Bought For</li>
-			        <li>-</li>
-			        <li>Number of Owners</li>
-			        <li>2</li>
-			        <li>Trade Status</li>
-   			        <li>Tradable</li>
-			        <li>Games Played (Other Clubs/Your Club)</li>
-			        <li>0 (0/0)</li>
-			        <li>Goal Scored (Other Clubs/Your Club)</li>
-			        <li>0 (0/0)</li>
-			        <li>Assists (Other Clubs/Your Club)</li>
-			        <li>0 (0/0)</li>
-			        <li>Yellow Card (Other Clubs/Your Club)</li>
-			        <li>0 (0/0)</li>
-			        <li>Red Card (Other Clubs/Your Club)</li>
-			        <li>0 (0/0)</li>
-			      </ul>
-			    </div>
-			  </div>			  
+				<div class="table" >
+					<div class="head">PLAYER DETAIL</div>
+
+					<div class="detail">
+						<ul>
+							<li>Bought For</li>
+							<li>-</li>
+							<li>Number of Owners</li>
+							<li>2</li>
+							<li>Trade Status</li>
+							<li>Tradable</li>
+							<li>Games Played (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+							<li>Goal Scored (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+							<li>Assists (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+							<li>Yellow Card (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+							<li>Red Card (Other Clubs/Your Club)</li>
+							<li>0 (0/0)</li>
+						</ul>
+					</div>
+				</div>			  
 			</div>
 		</div>
+
 		<div class="content" id="details">
 
-			<div id="attribute-column1" class="attribute-column">
+			<div id="attribute-Pace" class="attribute-column">
 
 				<script>
-					let gaugeHalf1 = new Gauge( 100, 6, 20, 80, 1500, "half", "-Half1", "PACE", "#ce4b99", document.getElementById("attribute-column1") ); 
+					let attributeDetails = new Array();
+					attributeDetails.push( new Array() );
+					attributeDetails[0].push( new Gauge( 100, 6, 20, 80, 1500, "half", "-HalfA0", "PACE", "#ce4b99", document.getElementById( "attribute-Pace" ) ) ); 
+					attributeDetails[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfA1", "Acceleration", "#ce4b99", document.getElementById( "attribute-Pace" ) ) );
+					attributeDetails[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfA2", "Sprint Speed", "#ce4b99", document.getElementById( "attribute-Pace" ) ) );
 				</script>
-				<button onclick = "gaugeHalf1.animate();">Animate</button>
-
-				<script>
-					let barHalf1 = new Bar( 200, 40, 10, 5, 100, 1500, "-HalfA1", "PASS", "#ce4b99", document.getElementById("attribute-column1") );
-					barHalf1 = new Bar( 100, 20, 6, 5, 100, 1500, "-HalfA2", "PACE", "#ce4b99", document.getElementById("attribute-column1") );
-					barHalf1 = new Bar( 100, 20, 6, 5, 100, 1500, "-HalfA3", "PACE", "#ce4b99", document.getElementById("attribute-column1") );
-					barHalf1 = new Bar( 190, 40, 12, 55, 100, 1500, "-HalfA4", "PACE", "#ce4b99", document.getElementById("attribute-column1") ); 
-				</script>
-				<button onclick = "barHalf1.animate();">Animate</button>
 
 			</div>
 
-			<div id="attribute-column2" class="attribute-column">
+			<div id="attribute-Shooting" class="attribute-column">
 				<script>
-					let gaugeHalf2 = new Gauge( 100, 6, 45, 100, 1500, "full", "-Half2", "SHOOTING", "#b1c94e", document.getElementById("attribute-column2") );
+					attributeDetails.push( new Array() );
+					attributeDetails[1].push( new Gauge( 100, 6, 45, 100, 1500, "full", "-HalfB0", "SHOOTING", "#b1c94e", document.getElementById( "attribute-Shooting" ) ) );
+					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB1", "Att. Position", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB2", "Finishing", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB3", "Shot Power", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB4", "Long Shot", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB5", "Volleys", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB6", "Penalties", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
 				</script>
-				<button onclick = "gaugeHalf2.animate();">Animate</button>
+	
+			</div>
 
+			<div id="attribute-Passing" class="attribute-column">
 				<script>
-					let barHalf2 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half2", "PACE", "#ce4b99", document.getElementById("attribute-column2") ); 
+					attributeDetails.push( new Array() );
+					attributeDetails[2].push ( new Gauge( 100, 6, 20, 65, 1500, "half", "-Half3C0", "PASSING", "#377bbc", document.getElementById( "attribute-Passing" ) ) );
+					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC1", "Vision", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC2", "Crossing", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC3", "FK Acc.", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC4", "Short Pass", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC5", "Long Pass", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC6", "Curve", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
 				</script>
-				<button onclick = "barHalf2.animate();">Animate</button>				
 
 			</div>
 
-			<div id="attribute-column3" class="attribute-column">
+			<div id="attribute-Dribbling" class="attribute-column">
 				<script>
-					let gaugeHalf3 = new Gauge( 100, 6, 20, 65, 1500, "half", "-Half3", "PASSING", "#377bbc", document.getElementById("attribute-column3") );
+					attributeDetails.push( new Array() ); 
+					attributeDetails[3].push( new Gauge( 100, 6, 20, 65, 1500, "half", "-HalfD0", "DRIBBLING", "#377bbc", document.getElementById( "attribute-Dribbling" ) ) );
+					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD1", "Agility", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD2", "Balance", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD3", "Reactions", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD4", "Ball Control", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD5", "Dribbling", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD6", "Composure", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) ); 
 				</script>
-				<button onclick = "gaugeHalf3.animate();">Animate</button>
-
-				<script>
-					let barHalf3 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half3", "PACE", "#ce4b99", document.getElementById("attribute-column3") ); 
-				</script>
-				<button onclick = "barHalf3.animate();">Animate</button>
 
 			</div>
 
-			<div id="attribute-column4" class="attribute-column">
+			<div id="attribute-Defending" class="attribute-column">
 				<script>
-					let gaugeHalf4 = new Gauge( 100, 6, 20, 65, 1500, "half", "-Half4", "DRIBBLING", "#377bbc", document.getElementById("attribute-column4") );
+					attributeDetails.push( new Array() );
+					attributeDetails[4].push( new Gauge( 100, 6, 20, 65, 1500, "half", "-HalfE0", "DEFENDING", "#377bbc", document.getElementById( "attribute-Defending" ) ) );
+					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE1", "Interceptions", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
+					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE2", "Heading Acc.", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
+					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE3", "Marking", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
+					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE4", "Stand Tackle", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
+					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE5", "Slide Tackle", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
 				</script>
-				<button onclick = "gaugeHalf4.animate();">Animate</button>
-
-				<script>
-					let barHalf4 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half4", "PACE", "#ce4b99", document.getElementById("attribute-column4") ); 
-				</script>
-				<button onclick = "barHalf4.animate();">Animate</button>
 
 			</div>
 
-			<div id="attribute-column5" class="attribute-column">
+			<div id="attribute-Physical" class="attribute-column">
 				<script>
-					let gaugeHalf5 = new Gauge( 100, 6, 20, 65, 1500, "half", "-Half5", "DEFENDING", "#377bbc", document.getElementById("attribute-column5") );
+					attributeDetails.push( new Array() );
+					attributeDetails[5].push( new Gauge( 100, 6, 20, 65, 1500, "half", "-HalfF0", "PHYSICAL", "#377bbc", document.getElementById( "attribute-Physical" ) ) );
+					attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF1", "Jumping", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
+					attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF2", "Stamina", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
+					attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF3", "Strength", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
+					attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF4", "Aggresion", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
 				</script>
-				<button onclick = "gaugeHalf5.animate();">Animate</button>
-
-				<script>
-					let barHalf5 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half5", "PACE", "#ce4b99", document.getElementById("attribute-column5") ); 
-				</script>
-				<button onclick = "barHalf5.animate();">Animate</button>
 
 			</div>
 
-			<div id="attribute-column6" class="attribute-column">
-				<script>
-					let gaugeHalf6 = new Gauge( 100, 6, 20, 65, 1500, "half", "-Half6", "PHYSICAL", "#377bbc", document.getElementById("attribute-column6") );
-				</script>
-				<button onclick = "gaugeHalf6.animate();">Animate</button>
-
-				<script>
-					let barHalf6 = new Bar( 100, 20, 6, 5, 100, 1500, "-Half6", "PACE", "#ce4b99", document.getElementById("attribute-column6") ); 
-				</script>
-				<button onclick = "barHalf6.animate();">Animate</button>				
-
-			</div>
-			
+			<button onclick = "updateAttributeDetails();">Animate</button>
+			<script>
+				function updateAttributeDetails(){
+					for( let i = 0, elem = attributeDetails.length; i < elem; i++ ){
+						for( let j = 0, subElem = attributeDetails[i].length; j < subElem; j++ ){
+							attributeDetails[i][j].animate();
+						};
+					};
+				};
+			</script>			
 		</div>
 	</div>
 
