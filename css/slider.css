@@ -1,0 +1,68 @@
+.strategyContainer {
+  height:300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.strategySlider {
+  padding: 120px;
+  margin: 120px;
+  border: 120px;
+}
+
+
+input[type=range] {
+  margin: auto;
+  outline: none;
+  padding: 0;
+  width: 150px;
+  height: 6px;
+  background-color: #000c15;
+  background-image: linear-gradient(#40464b, #40464b);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  height:6px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border: 0;
+  background: #f7c529;
+  border-radius: 100%;
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+  height: 18px;
+  width: 18px;
+}
+
+input[type=range]::slider-runnable-track {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input[type=range]::slider-thumb {
+  width: 15px;
+  height: 15px;
+  border: 0;
+  background: #f7c529;  
+  border-radius: 100%;
+}
+
+.zero-input[type=range]::-webkit-slider-thumb {
+  background: #FFF;
+  border: 2px solid #BBB;
+}
