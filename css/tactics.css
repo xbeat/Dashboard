@@ -17,14 +17,14 @@
 	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
-	top: 10px;
-	left: 650px;
+	top: 80px;
+	left: 850px;
 	z-index: 3;
 }
 
 .formationText{
 	display: flex;
-	font-size: 10px;
+	font-size: 15px;
 	font-family: Helvetica, Sans-serif;
 	display: flex;
 	width: 50px;
@@ -35,10 +35,9 @@
 	border: 1px solid transparent;
 }
 
-
 .pitch{
 	position: absolute;
-	top: 10px;
+	top: -110px;
 	left: 150px;
 	width:600px;
 	height:998px;
@@ -52,7 +51,7 @@
 #formationJerseyContainerV{
 	position: absolute;
 	left: 140px;
-	top: 200px;
+	top: 30px;
 	padding: 80px 0 0 0;
 	width: 645px;
 	height: 1020px;

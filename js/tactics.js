@@ -37,6 +37,7 @@ class Formation{
 
 			formationText.innerText = text;
 			formationText.setAttribute( 'data-id', i );
+			formationText.setAttribute( 'data-text', text );
 
 			// formation selection
 			formationText.addEventListener( "click", function( ev ){
@@ -45,6 +46,7 @@ class Formation{
 					el.style.border = "1px solid transparent";
 				});
 				this.style.border = "1px solid #38B87c";
+				document.getElementById("gameTacticsTitle").innerText = "Game Tactics ( " + ev.currentTarget.getAttribute( "data-text" ) + " )";
 
 				// display jersey
 				let formationJerseyContainer = document.getElementById( "formationJerseyContainer" + orientation );

@@ -53,7 +53,7 @@ body {
 	left: 0;
 	right: 0;
     width: 1200px;
-    height: 800px;
+    height: 950px;
 	flex-direction: column;
 }
 
@@ -118,7 +118,7 @@ ul.menu li a.menu_item {
     line-height: 1.4;
     background-color: rgba( 53, 61, 62, .7);
     color: #fff;
-    height: 800px;
+    height: 900px;
     display: none;
     align-items: center;
     align-content: space-around;
