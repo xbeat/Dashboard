@@ -1,15 +1,24 @@
-.strategyContainer {
-  height:300px;
+#gameStrategy{
   display: flex;
   flex-direction: column;
+  font-size: 22px;
 }
 
-.strategySlider {
-  padding: 120px;
-  margin: 120px;
-  border: 120px;
+.strategyPlayContainer,
+.strategyAttackContainer, 
+.strategyDefenseContainer,
+.teamTendency{
+  padding: 15px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
 }
 
+.strategyLabel {
+  display: flex;
+  padding: 15px;
+}
 
 input[type=range] {
   margin: auto;

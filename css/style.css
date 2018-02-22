@@ -115,9 +115,6 @@ ul.menu li a.menu_item {
 }
 
 .content {
-    font-size: 14px;
-    padding: 70px 10px;
-    line-height: 1.4;
     background-color: rgba( 53, 61, 62, .7);
     color: #fff;
     height: 900px;
@@ -177,65 +174,6 @@ ul.menu li a.menu_item {
 .svg-bar{
     width: "700px";
     height: "230px";
-}
-
-.teamStat1{
-    display: flex;
-    flex-direction: column;
-}
-
-.teamStat1-container{
-    display: flex;
-}
-
-.teamStat1-leftPart{
-    display: flex;
-}
-
-.teamStat1-rightPart{
-    display: flex;
-}
-
-.gameStat1{
-    display: flex;
-    flex-direction: column;
-}
-
-.gameStat1-container{
-    display: flex;
-}
-
-.gameStat1-leftPart{
-    display: flex;
-}
-
-.gameStat1-rightPart{
-    display: flex;
-}
-
-#player-data {
-    display: flex;
-    margin: 0 auto;
-    width: 1200px;
-    height: 700px;
-}
-
-.table {
-    width: 550px;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    /*border:3px solid rgba(39, 44, 48, 0.36); */
-    margin-left: 20px;
-}
-
-.table .head {
-    font-weight: 900;
-    font-size: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    min-height: 50px;
-    background-color: #fa8f09;
 }
 
 .bio ul, .detail ul {

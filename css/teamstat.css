@@ -1,0 +1,31 @@
+#teamStatistics{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 50px; 
+}
+
+#player-data {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    height: 700px;
+}
+
+.table {
+    width: 550px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    /*border:3px solid rgba(39, 44, 48, 0.36); */
+    margin-left: 20px;
+}
+
+.table .head {
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    min-height: 50px;
+    background-color: #fa8f09;
+}

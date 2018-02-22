@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="css/timeline.css" />
 	<link rel="stylesheet" href="css/tactics.css" />
 	<link rel="stylesheet" href="css/comparison.css" />
+	<link rel="stylesheet" href="css/gamestat.css" />
+	<link rel="stylesheet" href="css/teamstat.css" />
 	<link rel="stylesheet" href="css/slider.css" />
 	<script type="text/javascript" src="js/gauge.js"></script>
 	<script type="text/javascript" src="js/bar.js"></script>
@@ -23,7 +25,7 @@
 	<div class = "mainContainer">
 		<ul class="menu">
 			<li><a href="#" data-id="playerStatsContainer" data-color="#ce4b99" class="active tab">PLAYER STATISTICS</a></li>
-			<li><a href="#" data-id="teamStatsContainer" data-color="#b1c94e" class="menu_item tab">TEAMS RANK</a></li>
+			<li><a href="#" data-id="teamStatsContainer" data-color="#b1c94e" class="menu_item tab">TEAMS STATISTICS</a></li>
 			<li><a href="#" data-id="playerComparisonContainer" data-color="#377bbc" class="menu_item tab">PLAYER COMPARISON</a></li>
 			<li><a href="#" data-id="gameStatsContainer" data-color="#fa8f09" class="menu_item tab">GAME STATISTICS</a></li>
 			<li><a href="#" data-id="gameTacticsContainer" data-color="#e5be03" class="menu_item tab">GAME TACTICS</a></li>
@@ -189,9 +191,9 @@
 	<!-- Team Stat -->
 	<div id="teamStatsContainer" class="teamStatsContainer tab_content">
 		<ul class="menu">
-			<li><a href="#" data-id="teamStat1" data-color="#b1c94e" class="active tab">TEAM RANK</a></li>
+			<li><a href="#" data-id="teamStatistics" data-color="#b1c94e" class="active tab">TEAM STAT</a></li>
 		</ul>
-		<div class="content active teamStat1" id="teamStat1">
+		<div class="content active" id="teamStatistics">
 			<div id="player-data">
 				<div class="table">
 					<div class="head">TEAM RANK</div>
@@ -249,80 +251,77 @@
 	<!-- Player Comparison -->
 	<div id="playerComparisonContainer" class="playerComparisonContainer tab_content">
 		<ul class="menu">
-			<li><a href="#" data-id="comp1" data-color="#377bbc" class="active tab">Player 1</a></li>
+			<li><a href="#" data-id="comparison" data-color="#377bbc" class="active tab">Player Comparison</a></li>
 		</ul>
-		<div class="content active" id="comp1">
-		    <div class="centerStat">
-		        <div class="centerstatRow">
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">PACE</div>
-		            <div class="rightStat">2</div>
+		<div class="content active" id="comparison">
+			<!-- Scoreboard central big -->
+	        <div class="comparisonTitleContainer">
+	            <div class="comparisonTitleLeft">PLAYER A</div>
+	            <div class="comparisonTitleRight">PLAYER B</div>
+	        </div>
+
+		    <div class="centerComparison">
+		        <div class="centerComparisonRow">
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">PACE</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">PHYSICAL</div>
-		            <div class="rightStat">2</div>
+		        <div class="centerComparisonRow">
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">PHYSICAL</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">DEFENDING</div>
-		            <div class="rightStat">2</div>
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">DEFENDING</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">SHOOTING</div>
-		            <div class="rightStat">2</div>
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">SHOOTING</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">PASSING</div>
-		            <div class="rightStat">2</div>
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">PASSING</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">DRIBBLING</div>
-		            <div class="rightStat">2</div>
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">DRIBBLING</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">GOALKEEPING</div>
-		            <div class="rightStat">2</div>
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">GOALKEEPING</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">SHOT</div>
-		            <div class="rightStat">2</div>
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">SHOT</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">GOALS</div>
-		            <div class="rightStat">2</div>
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">GOALS</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">LEAGUE GOALS</div>
-		            <div class="rightStat">2</div>
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">LEAGUE GOALS</div>
+		            <div class="rightComparison">2</div>
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">DISTANCE</div>
-		            <div class="rightStat">2</div>   
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">DISTANCE</div>
+		            <div class="rightComparison">2</div>   
 		        </div>
-		        <div class="centerstatRow">  
-		            <div class="leftStat">1</div>
-		            <div class="statContainer">AVERAGE SPEED</div>
-		            <div class="rightStat">2</div>   
+		        <div class="centerComparisonRow">  
+		            <div class="leftComparison">1</div>
+		            <div class="comparisonContainer">AVERAGE SPEED</div>
+		            <div class="rightComparison">2</div>   
 		        </div>		        
 		    </div>
-
-		    <!-- Scoreboard central big -->
-	        <div class="scoreBoardBigBottom">
-	            <div class="leftPartBottom">FC INTERNAZIONALE</div>
-	            <div class="scoreBottomContainer">
-	                <div class="scoreBottom">0-1</div>
-	            </div>
-	            <div class="rightPartBottom">VILLARREAL CF</div>
-	        </div>
 
 		</div>
 	</div>
@@ -330,21 +329,21 @@
 	<!-- Game Stat -->
 	<div id="gameStatsContainer" class="gameStatsContainer tab_content">
 		<ul class="menu">
-			<li><a href="#" data-id="gameStat1" data-color="#fa8f09" class="active tab">Game Statistics</a></li>
+			<li><a href="#" data-id="gameStatistic" data-color="#fa8f09" class="active tab">Game Statistics</a></li>
 		</ul>
-		<div class="gameStat1 content active" id="gameStat1">
+		<div class="content active" id="gameStatistic">
 
 		    <!-- Scoreboard central big -->
 	        <div class="scoreGameStatistics">
-	            <div class="leftPartBottom">FC INTERNAZIONALE</div>
+	            <div class="leftPartGameStatistics">FC INTERNAZIONALE</div>
 	            <div class="scoreStatContainer">
 	                <div class="scoreLeft">0</div>
 	                <div class="scoreRight">1</div>
 	            </div>
-	            <div class="rightPartBottom">VILLARREAL CF</div>
+	            <div class="rightPartGameStatistics">VILLARREAL CF</div>
 	        </div>
 
-			<div class="gameStat-container">
+			<div class="gameStatisticsContainer">
 				<div id="gameStat-leftPart" class="gameStat-leftPart">
 					<div id="bar-gameStat-left"></div>
 					<div id="gauge-gameStat-left"></div>
@@ -353,23 +352,32 @@
 					<div id="bar-gameStat-right"></div>
 					<div id="gauge-gameStat-right"></div>
 				</div>
-				<script>
-
-					let gameStat = new Array();
-					gameStat.push( new Array() );
-					gameStat[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-gameStat0", "Possessions %", "#ce4b99", document.getElementById( "bar-gameStat-left" ) ) );
-					gameStat[0].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat1", "Shot Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-left") ) );
-					gameStat[0].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat2", "Pass Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-left") ) );
-
-					gameStat.push( new Array() );
-					gameStat[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-gameStat3", "Possessions %", "#ce4b99", document.getElementById( "bar-gameStat-right" ) ) );
-					gameStat[1].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat4", "Shot Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-right" ) ) );
-					gameStat[1].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat5", "Pass Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-right" ) ) );
-
-				</script>
-				<button onclick = "gaugeFullGs2Left.animate();">Animate</button>
-
 			</div>
+			<script>
+
+				let gameStat = new Array();
+				gameStat.push( new Array() );
+				gameStat[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-gameStat0", "Possessions %", "#ce4b99", document.getElementById( "bar-gameStat-left" ) ) );
+				gameStat[0].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat1", "Shot Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-left") ) );
+				gameStat[0].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat2", "Pass Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-left") ) );
+
+				gameStat.push( new Array() );
+				gameStat[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-gameStat3", "Possessions %", "#ce4b99", document.getElementById( "bar-gameStat-right" ) ) );
+				gameStat[1].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat4", "Shot Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-right" ) ) );
+				gameStat[1].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat5", "Pass Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-right" ) ) );
+
+			</script>
+
+			<button onclick = "updateGameStat();">Animate</button>
+			<script>
+				function updateGameStat(){
+					for( let i = 0, elem = gameStat.length; i < elem; i++ ){
+						for( let j = 0, subElem = gameStat[i].length; j < subElem; j++ ){
+							gameStat[i][j].animate();
+						};
+					};
+				};
+			</script>		
 
 			<div class="Timeline">
 				<svg height="5" width="200">
@@ -485,21 +493,46 @@
 		</div>
 	</div>
 
-	<!-- Player Comparison -->
+	<!-- Team strategy -->
 	<div id="gameStrategyContainer" class="gameStrategyContainer tab_content">
 		<ul class="menu">
-			<li><a href="#" data-id="comp1" data-color="#377bbc" class="active tab">Game Strategy</a></li>
+			<li><a href="#" data-id="gameStrategy" data-color="#cc00ff" class="active tab">Game Strategy</a></li>
 		</ul>
-		<div class="content active strategyContainer" id="strategyContainer"></div>
+		<div class="content active" id="gameStrategy">
+			
+			<div class="strategyPlayContainer" id="strategyPlayContainer">
+				<div class="strategyLabel">Play</div>
+			</div>
+			
+			<div class="strategyAttackContainer" id="strategyAttackContainer">
+				<div class="strategyLabel">Attack</div>
+			</div>			
+			<div class="strategyDefenseContainer" id="strategyDefenseContainer">
+				<div class="strategyLabel">Defense</div>
+			</div>
+			<div class="teamTendency" id="teamTendency"></div>
 
-		<script>
+			<script>
 
-			let gameStrategy = new Array();
-			gameStrategy.push( new Slider( 500, "gameStrategy0", "Possessions", document.getElementById( "strategyContainer" ) ) );
-			gameStrategy.push( new Slider( 500, "gameStrategy1", "Shot Arruracy", document.getElementById( "strategyContainer" ) ) );
-			gameStrategy.push( new Slider( 500, "gameStrategy2", "Pass Arruracy", document.getElementById( "strategyContainer" ) ) );
+				let gameStrategyPlay = new Array();
+				gameStrategyPlay.push( new Slider( 0, 100, 50, "gameStrategy0", "Speed", document.getElementById( "strategyPlayContainer" ) ) );
+				gameStrategyPlay.push( new Slider( 0, 100, 50, "gameStrategy1", "Pass", document.getElementById( "strategyPlayContainer" ) ) );
 
-		</script>
+				let gameStrategyAttack = new Array();
+				gameStrategyAttack.push( new Slider( 0, 100, 50, "gameStrategy2", "Pass", document.getElementById( "strategyAttackContainer" ) ) );
+				gameStrategyAttack.push( new Slider( 0, 100, 50, "gameStrategy3", "Cross", document.getElementById( "strategyAttackContainer" ) ) );
+				gameStrategyAttack.push( new Slider( 0, 100, 50, "gameStrategy4", "Shoot", document.getElementById( "strategyAttackContainer" ) ) );
+
+				let gameStrategyDefense = new Array();
+				gameStrategyDefense.push( new Slider( 0, 100, 50, "gameStrategy5", "Pressure", document.getElementById( "strategyDefenseContainer" ) ) );
+				gameStrategyDefense.push( new Slider( 0, 100, 50, "gameStrategy6", "Aggresion", document.getElementById( "strategyDefenseContainer" ) ) );
+				gameStrategyDefense.push( new Slider( 0, 100, 50, "gameStrategy7", "Player Interval", document.getElementById( "strategyDefenseContainer" ) ) );
+
+				let teamTendency  = new Slider( 0, 10, 5, "gameStrategy8", "Team Tendency", document.getElementById( "teamTendency" ) );
+
+			</script>
+
+		</div>
 
 	</div>	
 

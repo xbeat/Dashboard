@@ -9,6 +9,7 @@
 	sectionItems.push( document.getElementsByClassName('playerComparisonContainer') );
 	sectionItems.push( document.getElementsByClassName('gameStatsContainer') );
 	sectionItems.push( document.getElementsByClassName('gameTacticsContainer') );
+	sectionItems.push( document.getElementsByClassName('gameStrategyContainer') );
 
 	let menuItems = new Array();
 	let contentItems = new Array();

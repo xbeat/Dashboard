@@ -1,40 +1,47 @@
 class Slider{
-  constructor( value, name, label, element ){
+  constructor( min, max, value, name, label, element ){
 
     let child = new Array();
+    let ns = this;
 
-    child.push( this.slider( "p", "label", {
+    child.push( this.slider( "div", "label", {
           id: name + "Label",
-          style: "font-family: Arial",
-          style: "padding: 10px",
-          color: "#fff"
+          style: "width:120px; height:30px;"
       } )
     );
 
     child.push( this.slider( "input", name, {
-        class: "strategySlider",
+        style: "margin: 8px 10px 0 10px ; width:150px;",
         id: name,
         type: "range",
-        min: 0,
-        max: 1000,
-        value: 500
+        min: min,
+        max: max,
+        value: value
       } )
     );
     
+    child.push( this.slider( "div", name, {
+        id: name + "Value", 
+        style: "font-family: Arial, color: #fff; width:100px; height:30px;"
+      } )
+    );
+
     let container = this.slider( "div", "contaniner", {
-      style: "display: flex"
+      style: "display: flex; align-items: flex-start; width: 400px;"
     }, child );
 
     element.appendChild( container );
     
     document.getElementById( name + "Label" ).innerText = label;
+    document.getElementById( name + "Value" ).innerText = this.percent ( min, max, value );
 
     document.getElementById( name ).addEventListener( "input", function() {
-      var min = this.min;
-      var max = this.max;
-      var val = this.value;
 
-      this.style.backgroundSize = ( val - min ) * 100 / ( max - min ) + '% 100%';
+      let percent = ns.percent ( this.min, this.max, this.value );
+
+      this.style.backgroundSize = percent + '% 100%';
+
+      document.getElementById( name + "Value" ).innerText = percent;
 
       if ( this.value == 0 ) {
         this.setAttribute( "class", "zero-input" );
@@ -64,5 +71,8 @@ class Slider{
     return elem;
   };
 
-};
+  percent( min, max, value ){
+    return ( value - min ) * 100 / ( max - min );
+  };
 
+};
