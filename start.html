@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/gauge.js"></script>
 	<script type="text/javascript" src="js/bar.js"></script>
 	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript" src="js/timeline.js"></script>
 </head>
 
 <body>
@@ -346,29 +347,35 @@
 			<div class="gameStatisticsContainer">
 				<div id="gameStat-leftPart" class="gameStat-leftPart">
 					<div id="bar-gameStat-left"></div>
-					<div id="gauge-gameStat-left"></div>
+					<div class="gauge-gameStat-container">
+						<div id="gauge-gameStat-leftL"></div>
+						<div id="gauge-gameStat-leftR"></div>
+					</div>
 				</div>
 				<div id="gameStat-rightPart" class="gameStat-rightPart">
 					<div id="bar-gameStat-right"></div>
-					<div id="gauge-gameStat-right"></div>
+					<div class="gauge-gameStat-container">
+						<div id="gauge-gameStat-rightL"></div>
+						<div id="gauge-gameStat-rightR"></div>
+					</div>
 				</div>
 			</div>
 			<script>
 
 				let gameStat = new Array();
 				gameStat.push( new Array() );
-				gameStat[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-gameStat0", "Possessions %", "#ce4b99", document.getElementById( "bar-gameStat-left" ) ) );
-				gameStat[0].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat1", "Shot Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-left") ) );
-				gameStat[0].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat2", "Pass Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-left") ) );
+				gameStat[0].push( new Bar( 500, 60, 25, 10, 100, 1500, "-gameStat0", "Possessions %", "#ce4b99", document.getElementById( "bar-gameStat-left" ) ) );
+				gameStat[0].push( new Gauge( 170, 9, 20, 100, 1500, "full", "-gameStat1", "Shot Accuracy", "#ce4b99", document.getElementById( "gauge-gameStat-leftL") ) );
+				gameStat[0].push( new Gauge( 170, 9, 20, 100, 1500, "full", "-gameStat2", "Pass Accuracy", "#ce4b99", document.getElementById( "gauge-gameStat-leftR") ) );
 
 				gameStat.push( new Array() );
-				gameStat[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-gameStat3", "Possessions %", "#ce4b99", document.getElementById( "bar-gameStat-right" ) ) );
-				gameStat[1].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat4", "Shot Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-right" ) ) );
-				gameStat[1].push( new Gauge( 150, 6, 20, 100, 1500, "full", "-gameStat5", "Pass Arruracy", "#ce4b99", document.getElementById( "gauge-gameStat-right" ) ) );
+				gameStat[1].push( new Bar( 500, 60, 25, 10, 100, 1500, "-gameStat3", "Possessions %", "#ce4b99", document.getElementById( "bar-gameStat-right" ) ) );
+				gameStat[1].push( new Gauge( 170, 9, 20, 100, 1500, "full", "-gameStat4", "Shot Accuracy", "#ce4b99", document.getElementById( "gauge-gameStat-rightL" ) ) );
+				gameStat[1].push( new Gauge( 170, 9, 20, 100, 1500, "full", "-gameStat5", "Pass Accuracy", "#ce4b99", document.getElementById( "gauge-gameStat-rightR" ) ) );
 
 			</script>
 
-			<button onclick = "updateGameStat();">Animate</button>
+			<button style="z-index: 10" onclick = "updateGameStat();">Animate</button>
 			<script>
 				function updateGameStat(){
 					for( let i = 0, elem = gameStat.length; i < elem; i++ ){
@@ -378,61 +385,27 @@
 					};
 				};
 			</script>		
+			
+			<div id="lineContainer"> 
+			  <div id="lineBack"></div>
+			  <div id="lineProgress"></div>
+			  <div id="halfTime"></div>
+			</div>
 
-			<div class="Timeline">
-				<svg height="5" width="200">
-				  <line x1="0" y1="0" x2="200" y2="0" style="stroke:#004165; stroke-width:5" />
-				</svg>
+			<script>
+				let timeline = new TimeLine();
+				timeline.addEvent( 1, 'U', 'yellowCard', "player1" );
+				timeline.addEvent( 17, 'D', 'goal', "playerA" );
+				timeline.addEvent( 22, 'U', 'redCard', "playerK" ); 
+				timeline.addEvent( 35, 'D', 'goal', "player11" );
+				timeline.addEvent( 38, 'U', 'yellowCard', "playerZB" );
+				timeline.addEvent( 49, 'D', 'goal', "player2" );
+				timeline.addEvent( 90, 'D', 'redCard', "player3" );
+				timeline.addEvent( 94, 'U', 'goal', "player7" );
 
-				<div class="event1">
-				  <div class="event1Bubble">
-				    <div class="eventTime">
-				      <div class="DayDigit">MESSI</div>
-				    </div>
-				    <div class="eventTitle">GOAL</div>
-				  </div>
-				  <svg height="20" width="20">
-				    <circle cx="10" cy="11" r="5" fill="#004165" />
-				  </svg>
-				  <div class="time">9'</div>
-				</div>
+				timeline.upddateTime( 45 );
+			</script>
 
-				<svg height="5" width="300">
-				  <line x1="0" y1="0" x2="300" y2="0" style="stroke:#004165; stroke-width:5" />
-				</svg>
-
-				<div class="event2">
-				  <div class="event2Bubble">
-				    <div class="eventTime">
-				      <div class="DayDigit">MESSI</div>
-				    </div>
-				    <div class="eventTitle">RED CARD</div>
-				  </div>
-				  <svg height="20" width="20">
-				    <circle cx="10" cy="11" r="5" fill="#004165" />
-				  </svg>
-				  <div class="time2">32'</div>
-				</div>
-
-				<svg height="5" width="50">
-				  <line x1="0" y1="0" x2="50" y2="0" style="stroke:#004165; stroke-width:5" />
-				</svg>
-
-				<div class="now">40'</div>
-
-				<svg height="5" width="150">
-				    <line x1="0" y1="0" x2="150" y2="0" style="stroke:#004165;stroke-width:5" /> 
-				</svg>
-
-				<svg height="20" width="42">
-				  <line x1="1" y1="0" x2="1" y2="20" style="stroke:#004165;stroke-width:2" /> 
-				  <circle cx="11" cy="10" r="3" fill="#004165" />  
-				  <circle cx="21" cy="10" r="3" fill="#004165" />  
-				  <circle cx="31" cy="10" r="3" fill="#004165" />    
-				  <line x1="41" y1="0" x2="41" y2="20" style="stroke:#004165;stroke-width:2" /> 
-				</svg>
-
-			</div> 
 		</div>
 	</div>
 

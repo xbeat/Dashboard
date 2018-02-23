@@ -62,7 +62,8 @@
 
 .gameStatisticsContainer{
     display: flex;
-    margin-top: 150px;    
+    position: absolute;
+    top: 250px;    
 }
 
 .gameStat-container {
@@ -76,11 +77,19 @@
     flex-direction: column;
 }
 
-#bar-gameStat-left,
-#gauge-gameStat-left,
-#bar-gameStat-right,
-#gauge-gameStat-right {
+.gauge-gameStat-container{
+    display: flex;
     width: 600px;
+    justify-content: center;
+}
+
+#bar-gameStat-left,
+#gauge-gameStat-leftL,
+#gauge-gameStat-leftR,
+#bar-gameStat-right,
+#gauge-gameStat-rightL,
+#gauge-gameStat-rightR {
+    padding: 30px;
     display: flex; 
     justify-content: center;
 }
