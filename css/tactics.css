@@ -1,5 +1,25 @@
-#formationH {
+.pitch{
 	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: -110px;
+	z-index: 1;
+}
+
+.pitch svg{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	transform: perspective( 1200px ) rotateX( 45deg );
+}
+
+#formationH {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -11,53 +31,43 @@
 
 #formationV {
 	position: absolute;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
-	margin-left: auto;
-	margin-right: auto;
+	right: 100px;
 	top: 80px;
-	left: 850px;
 	z-index: 3;
+	-webkit-transform: translateZ( 600px );
 }
 
-.formationText{
-	display: flex;
-	font-size: 15px;
+.formationText {
+	position: relative;
+	font-size: 20px;
 	font-family: Helvetica, Sans-serif;
 	display: flex;
-	width: 50px;
+	width: 100px;
 	align-items: center;
 	justify-content: center;
-	margin: 2px 5px 0px 5px;
+	margin: 10px 5px 0px 5px;
 	cursor: pointer;
-	border: 1px solid transparent;
-}
-
-.pitch{
-	position: absolute;
-	top: -110px;
-	left: 150px;
-	width:600px;
-	height:998px;
-	z-index: 1;
-	transform: perspective( 1200px ) rotateX( 45deg );
+	border: 2px solid transparent;
+	-webkit-user-select: none;
+   	-moz-user-select: none;
+   	-ms-user-select: none;
+  	user-select: none;
 }
 
 /*
 * Jersey
 */
+
 #formationJerseyContainerV{
+	padding: 60px 10px 0 0;
 	position: absolute;
-	left: 140px;
-	top: 30px;
-	padding: 80px 0 0 0;
-	width: 645px;
-	height: 1020px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;	
 	flex-direction: column;
 	z-index: 2;
 	-webkit-transform: translateZ( 600px );

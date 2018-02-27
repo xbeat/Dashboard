@@ -10,8 +10,8 @@
 	<link rel="stylesheet" href="css/tactics.css" />
 	<link rel="stylesheet" href="css/comparison.css" />
 	<link rel="stylesheet" href="css/gamestat.css" />
-	<link rel="stylesheet" href="css/teamstat.css" />
 	<link rel="stylesheet" href="css/slider.css" />
+	<link rel="stylesheet" href="css/menu.css" />
 	<script type="text/javascript" src="js/gauge.js"></script>
 	<script type="text/javascript" src="js/bar.js"></script>
 	<script type="text/javascript" src="js/slider.js"></script>
@@ -22,162 +22,168 @@
 	<div class="xbeat-logo-wrapper">
 		<img class="xbeat-logo-up" src="../img/LogoBeat.svg" title="logo">
 	</div>
-	<!-- Main Menu -->
-	<div class = "mainContainer">
-		<ul class="menu">
-			<li><a href="#" data-id="playerStatsContainer" data-color="#ce4b99" class="active tab">PLAYER STATISTICS</a></li>
-			<li><a href="#" data-id="teamStatsContainer" data-color="#b1c94e" class="menu_item tab">TEAMS STATISTICS</a></li>
-			<li><a href="#" data-id="playerComparisonContainer" data-color="#377bbc" class="menu_item tab">PLAYER COMPARISON</a></li>
-			<li><a href="#" data-id="gameStatsContainer" data-color="#fa8f09" class="menu_item tab">GAME STATISTICS</a></li>
-			<li><a href="#" data-id="gameTacticsContainer" data-color="#e5be03" class="menu_item tab">GAME TACTICS</a></li>
-			<li><a href="#" data-id="gameStrategyContainer" data-color="#cc00ff" class="menu_item tab">GAME STRATEGY</a></li>			
-		</ul>
+
+	<!-- MAIN MENU -->
+	<div id="wrapperMain" class="wrapperMain">
+		<div class="icon settings" id="tabPlayerData">A</div><!-- PLAYER BIO -->
+		<div class="icon mail" id="tabPlayerStatistics">B</div><!-- PLAYER STATISTICS -->
+		<div class="icon phone" id="tabTeamStatistics">C</div><!-- TEAMS STATISTICS -->
+		<div class="icon mail" id="tabPlayerComparison">D</div><!-- PLAYER COMPARISON -->
+		<div class="icon phone" id="tabGameStatistics">E</div><!-- GAME STATISTICS -->
+		<div class="icon" id="camera">F</div><!-- CAMERA -->
+		<div class="icon phone" id="tabGameTactics">G</div><!-- GAME TACTICS -->
+		<div class="icon phone" id="tabGameStrategy">H</div><!-- GAME STRATEGY -->
+		<div id="closeMenu" class="icon phone">X</div><!-- CLOSE -->
 	</div>
 
-	<!-- Player Stat -->
-	<div id = "playerStatsContainer" class="playerStatsContainer tab_content">
-		<ul class="menu">
-			<li><a href="#" data-id="bio" data-color="#ce4b99" class="active tab">PLAYER BIO</a></li>
-			<li><a href="#" data-id="details" data-color="#ce4b99" class="menu_item tab">ATTRIBUTE DETAILS</a></li>
-		</ul>
-		<div class="content active" id="bio">
+	<!-- CAMERA MENU -->
+	<div id="wrapperCamera" class="wrapperCamera">
+		<div class="icon phone">1</div>
+		<div class="icon phone">2</div>
+		<div class="icon phone">3</div>
+		<div class="icon phone">4</div>
+		<div class="icon phone">5</div>
+		<div class="icon phone">F</div>	
+		<div id="closeCamera" class="icon phone">X</div>		
+	</div>
 
-			<div id="player-data">
-				<div class="table">
-					<div class="head">ATTRIBUTE DETAILS</div>
+	<!-- ----------- -->
+	<!-- Player Data -->
+	<div class="content active" id="playerData">
 
-					<div class="bio">
-						<ul>
-							<li>Name</li>
-							<li>Ben Foster</li>
-							<li>Know As</li>
-							<li>-</li>
-							<li>Date of Birth</li>
-							<li>03/04/1983</li>
-							<li>Height</li>
-							<li>6'4"</li>
-							<li>Save Technique</li>
-							<li>Traditional</li>
-							<li>Preferred Foot</li>
-							<li>Left</li>
-							<li>Weak Foot</li>
-							<li>***--</li>
-							<li>Skill Moves</li>
-							<li>*----</li>
-						</ul>
-					</div>
+		<div class="container">
+			<div class="table">
+				<div class="head">PLAYER ATTRIBUTE</div>
+
+				<div class="playerBio">
+					<ul>
+						<li>Name</li>
+						<li>Ben Foster</li>
+						<li>Know As</li>
+						<li>-</li>
+						<li>Date of Birth</li>
+						<li>03/04/1983</li>
+						<li>Height</li>
+						<li>6'4"</li>
+						<li>Save Technique</li>
+						<li>Traditional</li>
+						<li>Preferred Foot</li>
+						<li>Left</li>
+						<li>Weak Foot</li>
+						<li>***--</li>
+						<li>Skill Moves</li>
+						<li>*----</li>
+					</ul>
 				</div>
-
-				<div class="table" >
-					<div class="head">PLAYER DETAIL</div>
-
-					<div class="detail">
-						<ul>
-							<li>Bought For</li>
-							<li>-</li>
-							<li>Number of Owners</li>
-							<li>2</li>
-							<li>Trade Status</li>
-							<li>Tradable</li>
-							<li>Games Played (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-							<li>Goal Scored (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-							<li>Assists (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-							<li>Yellow Card (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-							<li>Red Card (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-						</ul>
-					</div>
-				</div>			  
 			</div>
+
+			<div class="table" >
+				<div class="head">PLAYER DETAIL</div>
+
+				<div class="playerDetail">
+					<ul>
+						<li>Bought For</li>
+						<li>-</li>
+						<li>Number of Owners</li>
+						<li>2</li>
+						<li>Trade Status</li>
+						<li>Tradable</li>
+						<li>Games Played (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+						<li>Goal Scored (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+						<li>Assists (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+						<li>Yellow Card (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+						<li>Red Card (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+					</ul>
+				</div>s
+			</div>			  
 		</div>
 
-		<div class="content" id="details">
+	</div>
 
-			<div id="attribute-Pace" class="attribute-column">
+	<!-- ----------- -->
+	<!-- Player Details -->
+	<div class="content" id="playerStatistics">
 
-				<script>
-					let attributeDetails = new Array();
-					attributeDetails.push( new Array() );
-					attributeDetails[0].push( new Gauge( 100, 6, 20, 80, 1500, "half", "-HalfA0", "PACE", "#ce4b99", document.getElementById( "attribute-Pace" ) ) ); 
-					attributeDetails[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfA1", "Acceleration", "#ce4b99", document.getElementById( "attribute-Pace" ) ) );
-					attributeDetails[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfA2", "Sprint Speed", "#ce4b99", document.getElementById( "attribute-Pace" ) ) );
-				</script>
+		<div class="titleHead">PLAYER STATISTICS</div>
+		<div class="container">
+			<div id="attribute-Pace" class="playerStatisticsColumn"></div>
+			<script>
+				let attributeDetails = new Array();
+				attributeDetails.push( new Array() );
+				attributeDetails[0].push( new Gauge( 100, 6, 20, 80, 1500, "half", "-HalfA0", "PACE", "#ce4b99", document.getElementById( "attribute-Pace" ) ) ); 
+				attributeDetails[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfA1", "Acceleration", "#ce4b99", document.getElementById( "attribute-Pace" ) ) );
+				attributeDetails[0].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfA2", "Sprint Speed", "#ce4b99", document.getElementById( "attribute-Pace" ) ) );
+			</script>
 
-			</div>
+			<div id="attribute-Shooting" class="playerStatisticsColumn"></div>
+			<script>
+				attributeDetails.push( new Array() );
+				attributeDetails[1].push( new Gauge( 100, 6, 45, 100, 1500, "full", "-HalfB0", "SHOOTING", "#b1c94e", document.getElementById( "attribute-Shooting" ) ) );
+				attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB1", "Att. Position", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+				attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB2", "Finishing", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+				attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB3", "Shot Power", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+				attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB4", "Long Shot", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+				attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB5", "Volleys", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+				attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB6", "Penalties", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
+			</script>
+		
+			<div id="attribute-Passing" class="playerStatisticsColumn"></div>
 
-			<div id="attribute-Shooting" class="attribute-column">
-				<script>
-					attributeDetails.push( new Array() );
-					attributeDetails[1].push( new Gauge( 100, 6, 45, 100, 1500, "full", "-HalfB0", "SHOOTING", "#b1c94e", document.getElementById( "attribute-Shooting" ) ) );
-					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB1", "Att. Position", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
-					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB2", "Finishing", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
-					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB3", "Shot Power", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
-					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB4", "Long Shot", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
-					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB5", "Volleys", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
-					attributeDetails[1].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfB6", "Penalties", "#ce4b99", document.getElementById( "attribute-Shooting" ) ) );
-				</script>
-	
-			</div>
+			<script>
+				attributeDetails.push( new Array() );
+				attributeDetails[2].push ( new Gauge( 100, 6, 20, 65, 1500, "half", "-Half3C0", "PASSING", "#377bbc", document.getElementById( "attribute-Passing" ) ) );
+				attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC1", "Vision", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+				attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC2", "Crossing", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+				attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC3", "FK Acc.", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+				attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC4", "Short Pass", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+				attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC5", "Long Pass", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+				attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC6", "Curve", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
+			</script>
 
-			<div id="attribute-Passing" class="attribute-column">
-				<script>
-					attributeDetails.push( new Array() );
-					attributeDetails[2].push ( new Gauge( 100, 6, 20, 65, 1500, "half", "-Half3C0", "PASSING", "#377bbc", document.getElementById( "attribute-Passing" ) ) );
-					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC1", "Vision", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
-					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC2", "Crossing", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
-					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC3", "FK Acc.", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
-					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC4", "Short Pass", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
-					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC5", "Long Pass", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
-					attributeDetails[2].push ( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfC6", "Curve", "#ce4b99", document.getElementById( "attribute-Passing" ) ) );
-				</script>
+			<div id="attribute-Dribbling" class="playerStatisticsColumn"></div>
 
-			</div>
+			<script>
+				attributeDetails.push( new Array() ); 
+				attributeDetails[3].push( new Gauge( 100, 6, 20, 65, 1500, "half", "-HalfD0", "DRIBBLING", "#377bbc", document.getElementById( "attribute-Dribbling" ) ) );
+				attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD1", "Agility", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+				attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD2", "Balance", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+				attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD3", "Reactions", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+				attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD4", "Ball Control", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+				attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD5", "Dribbling", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
+				attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD6", "Composure", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) ); 
+			</script>
 
-			<div id="attribute-Dribbling" class="attribute-column">
-				<script>
-					attributeDetails.push( new Array() ); 
-					attributeDetails[3].push( new Gauge( 100, 6, 20, 65, 1500, "half", "-HalfD0", "DRIBBLING", "#377bbc", document.getElementById( "attribute-Dribbling" ) ) );
-					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD1", "Agility", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
-					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD2", "Balance", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
-					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD3", "Reactions", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
-					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD4", "Ball Control", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
-					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD5", "Dribbling", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) );
-					attributeDetails[3].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfD6", "Composure", "#ce4b99", document.getElementById( "attribute-Dribbling" ) ) ); 
-				</script>
+			<div id="attribute-Defending" class="playerStatisticsColumn"></div>
 
-			</div>
+			<script>
+				attributeDetails.push( new Array() );
+				attributeDetails[4].push( new Gauge( 100, 6, 20, 65, 1500, "half", "-HalfE0", "DEFENDING", "#377bbc", document.getElementById( "attribute-Defending" ) ) );
+				attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE1", "Interceptions", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
+				attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE2", "Heading Acc.", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
+				attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE3", "Marking", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
+				attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE4", "Stand Tackle", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
+				attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE5", "Slide Tackle", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
+			</script>
 
-			<div id="attribute-Defending" class="attribute-column">
-				<script>
-					attributeDetails.push( new Array() );
-					attributeDetails[4].push( new Gauge( 100, 6, 20, 65, 1500, "half", "-HalfE0", "DEFENDING", "#377bbc", document.getElementById( "attribute-Defending" ) ) );
-					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE1", "Interceptions", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
-					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE2", "Heading Acc.", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
-					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE3", "Marking", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
-					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE4", "Stand Tackle", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
-					attributeDetails[4].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfE5", "Slide Tackle", "#ce4b99", document.getElementById( "attribute-Defending" ) ) );
-				</script>
+			<div id="attribute-Physical" class="playerStatisticsColumn"></div>
 
-			</div>
-
-			<div id="attribute-Physical" class="attribute-column">
-				<script>
-					attributeDetails.push( new Array() );
-					attributeDetails[5].push( new Gauge( 100, 6, 20, 65, 1500, "half", "-HalfF0", "PHYSICAL", "#377bbc", document.getElementById( "attribute-Physical" ) ) );
-					attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF1", "Jumping", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
-					attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF2", "Stamina", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
-					attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF3", "Strength", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
-					attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF4", "Aggresion", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
-				</script>
-
-			</div>
+			<script>
+				attributeDetails.push( new Array() );
+				attributeDetails[5].push( new Gauge( 100, 6, 20, 65, 1500, "half", "-HalfF0", "PHYSICAL", "#377bbc", document.getElementById( "attribute-Physical" ) ) );
+				attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF1", "Jumping", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
+				attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF2", "Stamina", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
+				attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF3", "Strength", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
+				attributeDetails[5].push( new Bar( 150, 40, 10, 5, 100, 1500, "-HalfF4", "Aggresion", "#ce4b99", document.getElementById( "attribute-Physical" ) ) );
+			</script>
 
 			<button onclick = "updateAttributeDetails();">Animate</button>
 			<script>
+
 				function updateAttributeDetails(){
 					for( let i = 0, elem = attributeDetails.length; i < elem; i++ ){
 						for( let j = 0, subElem = attributeDetails[i].length; j < subElem; j++ ){
@@ -185,77 +191,75 @@
 						};
 					};
 				};
-			</script>			
-		</div>
+
+			</script>
+		</div>		
 	</div>
 
+	<!-- ----------- -->
 	<!-- Team Stat -->
-	<div id="teamStatsContainer" class="teamStatsContainer tab_content">
-		<ul class="menu">
-			<li><a href="#" data-id="teamStatistics" data-color="#b1c94e" class="active tab">TEAM STAT</a></li>
-		</ul>
-		<div class="content active" id="teamStatistics">
-			<div id="player-data">
-				<div class="table">
-					<div class="head">TEAM RANK</div>
+	<div class="content" id="teamStatistics">
 
-					<div class="bio">
-						<ul>
-							<li>Name</li>
-							<li>Ben Foster</li>
-							<li>Know As</li>
-							<li>-</li>
-							<li>Date of Birth</li>
-							<li>03/04/1983</li>
-							<li>Height</li>
-							<li>6'4"</li>
-							<li>Save Technique</li>
-							<li>Traditional</li>
-							<li>Preferred Foot</li>
-							<li>Left</li>
-							<li>Weak Foot</li>
-							<li>***--</li>
-							<li>Skill Moves</li>
-							<li>*----</li>
-						</ul>
-					</div>
+		<div class="container">
+			<div class="table">
+				<div class="head">TEAM RANK</div>
+
+				<div class="teamRank">
+					<ul>
+						<li>Name</li>
+						<li>Ben Foster</li>
+						<li>Know As</li>
+						<li>-</li>
+						<li>Date of Birth</li>
+						<li>03/04/1983</li>
+						<li>Height</li>
+						<li>6'4"</li>
+						<li>Save Technique</li>
+						<li>Traditional</li>
+						<li>Preferred Foot</li>
+						<li>Left</li>
+						<li>Weak Foot</li>
+						<li>***--</li>
+						<li>Skill Moves</li>
+						<li>*----</li>
+					</ul>
 				</div>
-
-				<div class="table" >
-					<div class="head">TEAM STAT</div>
-
-					<div class="detail">
-						<ul>
-							<li>Bought For</li>
-							<li>-</li>
-							<li>Number of Owners</li>
-							<li>2</li>
-							<li>Trade Status</li>
-							<li>Tradable</li>
-							<li>Games Played (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-							<li>Goal Scored (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-							<li>Assists (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-							<li>Yellow Card (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-							<li>Red Card (Other Clubs/Your Club)</li>
-							<li>0 (0/0)</li>
-						</ul>
-					</div>
-				</div>			  
 			</div>
+
+			<div class="table" >
+				<div class="head">TEAM STAT</div>
+
+				<div class="teamStat">
+					<ul>
+						<li>Bought For</li>
+						<li>-</li>
+						<li>Number of Owners</li>
+						<li>2</li>
+						<li>Trade Status</li>
+						<li>Tradable</li>
+						<li>Games Played (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+						<li>Goal Scored (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+						<li>Assists (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+						<li>Yellow Card (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+						<li>Red Card (Other Clubs/Your Club)</li>
+						<li>0 (0/0)</li>
+					</ul>
+				</div>
+			</div>			  
 		</div>
+
 	</div>
-	
+
+	<!-- ----------- -->
 	<!-- Player Comparison -->
-	<div id="playerComparisonContainer" class="playerComparisonContainer tab_content">
-		<ul class="menu">
-			<li><a href="#" data-id="comparison" data-color="#377bbc" class="active tab">Player Comparison</a></li>
-		</ul>
-		<div class="content active" id="comparison">
-			<!-- Scoreboard central big -->
+	<div class="content" id="playerComparison">
+
+		<div class="titleHead">PLAYER COMPARISON</div>
+		<div class="container">
 	        <div class="comparisonTitleContainer">
 	            <div class="comparisonTitleLeft">PLAYER A</div>
 	            <div class="comparisonTitleRight">PLAYER B</div>
@@ -323,18 +327,16 @@
 		            <div class="rightComparison">2</div>   
 		        </div>		        
 		    </div>
-
 		</div>
+
 	</div>
 
+	<!-- ----------- -->
 	<!-- Game Stat -->
-	<div id="gameStatsContainer" class="gameStatsContainer tab_content">
-		<ul class="menu">
-			<li><a href="#" data-id="gameStatistic" data-color="#fa8f09" class="active tab">Game Statistics</a></li>
-		</ul>
-		<div class="content active" id="gameStatistic">
+	<div class="content" id="gameStatistics">
 
-		    <!-- Scoreboard central big -->
+		<div class="titleHead">GAME STATISTICS</div>
+		<div class="container">
 	        <div class="scoreGameStatistics">
 	            <div class="leftPartGameStatistics">FC INTERNAZIONALE</div>
 	            <div class="scoreStatContainer">
@@ -360,6 +362,7 @@
 					</div>
 				</div>
 			</div>
+
 			<script>
 
 				let gameStat = new Array();
@@ -376,6 +379,7 @@
 			</script>
 
 			<button style="z-index: 10" onclick = "updateGameStat();">Animate</button>
+
 			<script>
 				function updateGameStat(){
 					for( let i = 0, elem = gameStat.length; i < elem; i++ ){
@@ -405,18 +409,18 @@
 
 				timeline.upddateTime( 45 );
 			</script>
-
 		</div>
+
 	</div>
 
+	<!-- ------------ -->
 	<!-- Game Tactics -->
-	<div id="gameTacticsContainer" class="gameTacticsContainer tab_content">
-		<ul class="menu">
-			<li><a href="#" id="gameTacticsTitle" data-id="gameTactics" data-color="#e5be03" class="active tab">Game Tactics</a></li>
-		</ul>
-		<div class="content active" id="gameTactics">
+	<div class="content" id="gameTactics">
+
+		<div id="gameTacticsTitle" class="titleHead">GAME TACTICS</div>
+		<div class="containerTactics">
 			<div class="pitch">
-				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 599.21 998">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="599.21" height="998" viewBox="0 0 599.21 998">
 					<defs>				
 						<pattern id="pitchGrass" width="512" height="512" patternUnits="userSpaceOnUse" viewBox="0 0 512 512">
 							<rect class="pitchGrass" width="512" height="512"/>
@@ -460,55 +464,54 @@
 					<path class="pitchSegment" d="M21,931c9.52,0,17.23,8.16,17.23,18.24"/>
 				</svg>
 			</div>
-			
-			<div id="formationV"></div>
+		
 			<div id="formationJerseyContainerV"></div>
+			<div id="formationV"></div>
 		</div>
 	</div>
 
+	<!-- ------------- -->
 	<!-- Team strategy -->
-	<div id="gameStrategyContainer" class="gameStrategyContainer tab_content">
-		<ul class="menu">
-			<li><a href="#" data-id="gameStrategy" data-color="#cc00ff" class="active tab">Game Strategy</a></li>
-		</ul>
-		<div class="content active" id="gameStrategy">
-			
+	<div class="content" id="gameStrategy">
+		
+		<div class="titleHead">GAME STRATEGY</div>
+		<div class="gameStrategyContainer">
 			<div class="strategyPlayContainer" id="strategyPlayContainer">
 				<div class="strategyLabel">Play</div>
 			</div>
 			
 			<div class="strategyAttackContainer" id="strategyAttackContainer">
 				<div class="strategyLabel">Attack</div>
-			</div>			
+			</div>
+
 			<div class="strategyDefenseContainer" id="strategyDefenseContainer">
 				<div class="strategyLabel">Defense</div>
 			</div>
 			<div class="teamTendency" id="teamTendency"></div>
-
-			<script>
-
-				let gameStrategyPlay = new Array();
-				gameStrategyPlay.push( new Slider( 0, 100, 50, "gameStrategy0", "Speed", document.getElementById( "strategyPlayContainer" ) ) );
-				gameStrategyPlay.push( new Slider( 0, 100, 50, "gameStrategy1", "Pass", document.getElementById( "strategyPlayContainer" ) ) );
-
-				let gameStrategyAttack = new Array();
-				gameStrategyAttack.push( new Slider( 0, 100, 50, "gameStrategy2", "Pass", document.getElementById( "strategyAttackContainer" ) ) );
-				gameStrategyAttack.push( new Slider( 0, 100, 50, "gameStrategy3", "Cross", document.getElementById( "strategyAttackContainer" ) ) );
-				gameStrategyAttack.push( new Slider( 0, 100, 50, "gameStrategy4", "Shoot", document.getElementById( "strategyAttackContainer" ) ) );
-
-				let gameStrategyDefense = new Array();
-				gameStrategyDefense.push( new Slider( 0, 100, 50, "gameStrategy5", "Pressure", document.getElementById( "strategyDefenseContainer" ) ) );
-				gameStrategyDefense.push( new Slider( 0, 100, 50, "gameStrategy6", "Aggresion", document.getElementById( "strategyDefenseContainer" ) ) );
-				gameStrategyDefense.push( new Slider( 0, 100, 50, "gameStrategy7", "Player Interval", document.getElementById( "strategyDefenseContainer" ) ) );
-
-				let teamTendency  = new Slider( 0, 10, 5, "gameStrategy8", "Team Tendency", document.getElementById( "teamTendency" ) );
-
-			</script>
-
 		</div>
+		<script>
 
-	</div>	
+			let gameStrategyPlay = new Array();
+			gameStrategyPlay.push( new Slider( 0, 100, 50, "gameStrategy0", "Speed", document.getElementById( "strategyPlayContainer" ) ) );
+			gameStrategyPlay.push( new Slider( 0, 100, 50, "gameStrategy1", "Pass", document.getElementById( "strategyPlayContainer" ) ) );
 
+			let gameStrategyAttack = new Array();
+			gameStrategyAttack.push( new Slider( 0, 100, 50, "gameStrategy2", "Pass", document.getElementById( "strategyAttackContainer" ) ) );
+			gameStrategyAttack.push( new Slider( 0, 100, 50, "gameStrategy3", "Cross", document.getElementById( "strategyAttackContainer" ) ) );
+			gameStrategyAttack.push( new Slider( 0, 100, 50, "gameStrategy4", "Shoot", document.getElementById( "strategyAttackContainer" ) ) );
+
+			let gameStrategyDefense = new Array();
+			gameStrategyDefense.push( new Slider( 0, 100, 50, "gameStrategy5", "Pressure", document.getElementById( "strategyDefenseContainer" ) ) );
+			gameStrategyDefense.push( new Slider( 0, 100, 50, "gameStrategy6", "Aggresion", document.getElementById( "strategyDefenseContainer" ) ) );
+			gameStrategyDefense.push( new Slider( 0, 100, 50, "gameStrategy7", "Player Interval", document.getElementById( "strategyDefenseContainer" ) ) );
+
+			let teamTendency  = new Slider( 0, 10, 5, "gameStrategy8", "Team Tendency", document.getElementById( "teamTendency" ) );
+
+		</script>
+
+	</div>
+
+	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/tactics.js"></script>
 	<script src="js/index.js"></script>
 

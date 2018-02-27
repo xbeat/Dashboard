@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.wrapperMain {
+	position: absolute;
+	display: flex;
+	width: 1000px;
+	height: 110px;
+	margin: -100px auto;
+	left: 0;
+	right: 0;	
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 18px;
+	padding: 0;
+	transition: margin .5s;
+}
+
+.wrapperCamera {
+	position: absolute;
+	display: flex;
+	width: 800px;
+	height: 110px;
+	margin: -170px auto;
+	left: 0;
+	right: 0;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 18px;
+	padding: 0;
+	transition: margin .5s;
+}
+
+.icon {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	width: 80px;
+	height: 80px;
+	margin: 15px;
+	border-radius: 50%;
+	transition: transform .4s;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 55px;
+	color: #fff;
+}
+
+.phone {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.mail {
+	background: rgba(55, 55, 225, 0.3);
+}
+
+#camera {
+	background: rgba(55, 55, 225, 0.3);
+}
+
+.settings{
+	background-color: #a542fd;
+}
+

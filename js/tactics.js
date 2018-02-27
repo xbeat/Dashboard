@@ -29,10 +29,10 @@ class Formation{
 			formationText.classList.add( "formationText" );
 			document.getElementById( "formation" + orientation ).appendChild( formationText );
 			
-			let text = "";
+			let text = formation[ i ][ 0 ];
 
-			for ( let j = 0; j < formation[ i ].length; j++ ){	
-				text = text + " " + formation[ i ][ j ];
+			for ( let j = 1; j < formation[ i ].length; j++ ){	
+				text = text + " - " + formation[ i ][ j ];
 			};
 
 			formationText.innerText = text;
@@ -43,10 +43,10 @@ class Formation{
 			formationText.addEventListener( "click", function( ev ){
 				let selectedFormation = ev.currentTarget.getAttribute( "data-id" );
 				[].forEach.call( document.querySelectorAll( '.formationText' ), function ( el, indexElem ) {
-					el.style.border = "1px solid transparent";
+					el.style.border = "2px solid transparent";
 				});
-				this.style.border = "1px solid #38B87c";
-				document.getElementById("gameTacticsTitle").innerText = "Game Tactics ( " + ev.currentTarget.getAttribute( "data-text" ) + " )";
+				this.style.borderBottom = "2px solid #38B87c";
+				document.getElementById("gameTacticsTitle").innerText = "GAME TACTICS ( " + ev.currentTarget.getAttribute( "data-text" ) + " )";
 
 				// display jersey
 				let formationJerseyContainer = document.getElementById( "formationJerseyContainer" + orientation );
@@ -54,9 +54,9 @@ class Formation{
 				let jerseyNUmber = 0;
 
 				if ( formation[ selectedFormation ].length == 4 ){
-					var jerseyMargin = "0px 50px 30px 0px";
+					var jerseyMargin = "0px 20px 30px 20px";
 				} else {
-					var jerseyMargin = "0px 50px 80px 0px";
+					var jerseyMargin = "0px 20px 80px 20px";
 				};
 
 				for ( let j = formation[ selectedFormation ].length - 1; j >= 0; j-- ){	

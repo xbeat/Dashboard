@@ -1,5 +1,6 @@
  
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 html {
     height: 100%
@@ -33,131 +34,24 @@ body {
     margin: auto;
 }
 
-.mainContainer {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-    width: 1164px;
-    height: 800px;
-}
-
-.playerStatsContainer,
-.teamStatsContainer,
-.playerComparisonContainer,
-.gameStatsContainer,
-.gameTacticsContainer,
-.gameStrategyContainer {
-	position: absolute;
-	top: 130px;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-    width: 1200px;
-    height: 950px;
-	flex-direction: column;
-}
-
-.teamStatsContainer,
-.playerComparisonContainer,
-.gameStatsContainer,
-.gameTacticsContainer,
-.gameStrategyContainer {
-    display: none;
-}
-
-ul.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0;
-    background: #fff;
-}
- 
-ul.menu li {
-    display: inline-block;
-}
- 
-ul.menu li a {
-    display: inline-block;
-    font-size: 22px;
-    width: 180px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    text-decoration: none;
-    padding: 7px;
-    color: #333;
-}
- 
-ul.menu li a.active {
-    display: inline-block;
-    font-size: 22px;
-    width: 180px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    text-decoration: none;
-    padding: 7px;
-}
-
-ul.menu li a.menu_item {
-    display: inline-block;
-    font-size: 22px;
-    width: 180px;
-    height: 32px;
-    line-height: 32px;
-    text-align: center;
-    text-decoration: none;
-    padding: 7px;
-    background: #fff;
-    color: #333;
-}
-
 .content {
+    position: relative;
+    top: 200px; 
+    padding-top: 30px;
     background-color: rgba( 53, 61, 62, .7);
     color: #fff;
     height: 900px;
     display: none;
-    align-items: center;
-    align-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
 }
 
 .content.active {
     display: flex;
 }
 
-.bar-grey{
-    fill: #B8B8B8;
-    opacity: 0.9;
-    width: 140px;
-    height: 8px;
-}
-.the-line{
-    height: 8px;
-    fill: #FFD819;
-    opacity: 0.9;
-}
-@keyframes bar-running {
-    0%   { x: 0px;  }
-    20% { x: 200px; }
-    100% { x: 200px; }
-}
-.bar-lines .the-line{
-    animation: 5s linear bar-running infinite;
-}
-
-@keyframes bar-fadding {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    100% { opacity: 1; }
-}
-
-.bar-wrapper{ 
-    animation: 5s linear bar-fadding infinite; 
-}
-
-.attribute-column{
+.playerStatisticsColumn{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,23 +59,36 @@ ul.menu li a.menu_item {
     padding: 7px 10px;
 }
 
-#details{
-    align-items: flex-start;
-    justify-content: center;
-    border-top: 200px; 
+.table {
+    width: 550px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    /*border:3px solid rgba(39, 44, 48, 0.36); */
+    margin-left: 20px;
 }
 
-.svg-bar{
-    width: "700px";
-    height: "230px";
+.table .head {
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    min-height: 50px;
+    background-color: #fa8f09;
 }
 
-.bio ul, .detail ul {
+.playerBio ul,
+.playerDetail ul,
+.teamStat ul,
+.teamRank ul {
     list-style: none;
     padding: 20px;
 }
 
-.bio ul li, .detail ul li {
+.playerBio ul li,
+.playerDetail ul li,
+.teamStat ul li,
+.teamRank ul li {
     margin-bottom: 5px;
     text-align: left;
     text-transform: uppercase;
@@ -190,10 +97,40 @@ ul.menu li a.menu_item {
     padding: 5px;
 }
 
-.bio ul li:nth-child(odd),
-.detail ul li:nth-child(odd) {
+.playerBio ul li:nth-child(odd),
+.playerDetail ul li:nth-child(odd),
+.teamStat ul li:nth-child(odd),
+.teamRank ul li:nth-child(odd) {
     color: #0c0c0c;
     background-color: rgba( 240, 240, 240, .5);
 }
 
+.gameStrategyContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.titleHead {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    min-height: 50px;
+    background-color: #fa8f09;
+}
+
+.containerTactics{
+    width: 100%;
+}

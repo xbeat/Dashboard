@@ -1,7 +1,8 @@
 #gameStrategy{
-  display: flex;
+  display: none;
   flex-direction: column;
   font-size: 22px;
+  width: 100%;  
 }
 
 .strategyPlayContainer,
@@ -9,69 +10,94 @@
 .strategyDefenseContainer,
 .teamTendency{
   padding: 15px;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: #fff;
 }
 
 .strategyLabel {
   display: flex;
-  padding: 15px;
-}
-
-input[type=range] {
+  padding: 15px 0 15px 100px;
+  width: 800px;
   margin: auto;
-  outline: none;
-  padding: 0;
-  width: 150px;
-  height: 6px;
-  background-color: #000c15;
-  background-image: linear-gradient(#40464b, #40464b);
-  background-size: 50% 100%;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-appearance: none;
-  height:6px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  font-size: 44px;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
-  box-shadow: none;
-  border: none;
-  background: transparent;
-  -webkit-appearance: none;
+input[type="range"] { 
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+    width: 400px;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
 }
 
-input[type=range]::-webkit-slider-thumb {
-  width: 15px;
-  height: 15px;
-  border: 0;
-  background: #f7c529;
-  border-radius: 100%;
-  -webkit-appearance: none;
+::-webkit-slider-runnable-track {
+    background: rgba( 255, 0, 0, .8 );
 }
 
-input[type=range]::-webkit-slider-thumb:active {
-  height: 18px;
-  width: 18px;
+/*
+ * 1. Set to 0 width and remove border for a slider without a thumb
+ */
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* 1 */
+    height: 40px;
+    background: #fff;
+    box-shadow: -100vw 0 0 100vw rgba( 0, 0, 255, .6 );
+    border: 4px solid #333; /* 1 */
 }
 
-input[type=range]::slider-runnable-track {
-  box-shadow: none;
-  border: none;
-  background: transparent;
+::-moz-range-track {
+    height: 40px;
+    background: rgba( 255, 0, 0, .8 );
 }
 
-input[type=range]::slider-thumb {
-  width: 15px;
-  height: 15px;
-  border: 0;
-  background: #f7c529;  
-  border-radius: 100%;
+::-moz-range-thumb {
+    background: #fff;
+    height: 40px;
+    width: 20px;
+    border: 4px solid #333;
+    border-radius: 0 !important;
+    box-shadow: -100vw 0 0 100vw rgba( 0, 0, 255, .6 );
+    box-sizing: border-box;
 }
 
-.zero-input[type=range]::-webkit-slider-thumb {
-  background: #FFF;
-  border: 2px solid #BBB;
+::-ms-fill-lower { 
+    background: rgba( 0, 0, 255, .8 );;
+}
+
+::-ms-thumb { 
+    background: #fff;
+    border: 2px solid #333;
+    height: 40px;
+    width: 20px;
+    box-sizing: border-box;
+}
+
+::-ms-ticks-after { 
+    display: none; 
+}
+
+::-ms-ticks-before { 
+    display: none; 
+}
+
+::-ms-track { 
+    background: rgba( 255, 0, 0, .8 );
+    color: transparent;
+    height: 40px;
+    border: none;
+}
+
+::-ms-tooltip { 
+    display: none;
 }

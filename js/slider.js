@@ -6,12 +6,12 @@ class Slider{
 
     child.push( this.slider( "div", "label", {
           id: name + "Label",
-          style: "width:120px; height:30px;"
+          style: "height:50px; width:200px; text-align: right; font-size: 33px;"
       } )
     );
 
     child.push( this.slider( "input", name, {
-        style: "margin: 8px 10px 0 10px ; width:150px;",
+        style: "margin: 8px 10px 0 10px ; width:350px;",
         id: name,
         type: "range",
         min: min,
@@ -22,12 +22,12 @@ class Slider{
     
     child.push( this.slider( "div", name, {
         id: name + "Value", 
-        style: "font-family: Arial, color: #fff; width:100px; height:30px;"
+        style: "width:100px; height:50px; font-size: 33px;"
       } )
     );
 
     let container = this.slider( "div", "contaniner", {
-      style: "display: flex; align-items: flex-start; width: 400px;"
+      style: "display: flex; align-items: center; justify-content: center; width: 800px; margin: auto; left: 0; right: 0;"
     }, child );
 
     element.appendChild( container );
