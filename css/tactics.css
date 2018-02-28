@@ -153,13 +153,12 @@
 }
 
 .goalKeeperContainer {
-	margin-bottom: 135px;
-	max-width: 110px;
+	display: flex;
+	justify-content: center;
 	z-index: 2;	
 	font-size: 9px;
 	font-weight: 600;
 	color: #fff;
-	width: 500px;
 }
 
 /*

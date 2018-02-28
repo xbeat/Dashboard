@@ -69,12 +69,11 @@ body {
 }
 
 .table .head {
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: 400;
+    font-size: 50px;
     text-transform: uppercase;
     text-align: center;
     min-height: 50px;
-    background-color: #fa8f09;
 }
 
 .playerBio ul,
@@ -123,14 +122,33 @@ body {
     justify-content: center;
     display: flex;
     width: 100%;
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: 400;
+    font-size: 54px;
     text-transform: uppercase;
     text-align: center;
-    min-height: 50px;
-    background-color: #fa8f09;
+    min-height: 60px;
+    margin-bottom: 20px;
 }
 
 .containerTactics{
     width: 100%;
+}
+
+.closeTab{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    border-radius: 50%;
+    transition: transform .4s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    background: #a542fd;
 }

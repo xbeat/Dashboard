@@ -12,6 +12,12 @@
 	border-radius: 18px;
 	padding: 0;
 	transition: margin .5s;
+	-ms-touch-action: none;
+   	touch-action: none;
+   	-webkit-user-select: none;
+   	-moz-user-select: none;
+   	-ms-user-select: none;
+   	user-select: none;
 }
 
 .wrapperCamera {
@@ -26,6 +32,12 @@
 	border-radius: 18px;
 	padding: 0;
 	transition: margin .5s;
+	-ms-touch-action: none;
+   	touch-action: none;
+   	-webkit-user-select: none;
+   	-moz-user-select: none;
+   	-ms-user-select: none;
+   	user-select: none;	
 }
 
 .icon {
@@ -59,4 +71,3 @@
 .settings{
 	background-color: #a542fd;
 }
-
